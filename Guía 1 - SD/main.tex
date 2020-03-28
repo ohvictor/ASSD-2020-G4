@@ -1,0 +1,32 @@
+\documentclass{report}
+
+
+\input{preambulo.tex}
+
+\begin{document}
+
+\input{caratula.tex}
+
+\tableofcontents
+\newpage
+
+\chapter*{Ejercicio 1}
+\addcontentsline{toc}{chapter}{Ejercicio 1}
+
+\section{Parte D}
+Tenemos el siguiente filtro:
+$$R_x(nT) = 5nTx^2(nT)$$
+Ya podemos observar que este va a no ser invariante en el tiempo, ni lineal. Pero vamos a demostrarlo a continuaci\'on.\\
+Es invariante en el tiempo?\\
+Siendo $T_k$ un retardo en el tiempo k veces.
+$$T_k[x(nT)] = x(nT-kT) = x_k\dashrightarrow R_{x_{k}}(nT) = 5nTx^2(nT-kT)$$
+$$R_x(nT) = 5nTx^2(nT)\dashrightarrow T_k[R_x(nT))] = 5(nT-kT)x^2(nT-kT)$$
+Las ecuaciones son diferentes por lo tanto no es invariante en el tiempo.
+
+\section{Parte E}
+
+
+\section{Parte I}
+
+
+\end{document}
