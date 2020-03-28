@@ -13,20 +13,101 @@
 \chapter*{Ejercicio 1}
 \addcontentsline{toc}{chapter}{Ejercicio 1}
 
-\section{Parte D}
+\section{Parte d}
 Tenemos el siguiente filtro:
 $$R_x(nT) = 5nTx^2(nT)$$
 Ya podemos observar que este va a no ser invariante en el tiempo, ni lineal. Pero vamos a demostrarlo a continuaci\'on.\\
 Es invariante en el tiempo?\\
-Siendo $T_k$ un retardo en el tiempo k veces.
+Siendo $T_k$ un retardo en el tiempo k veces.\\
 $$T_k[x(nT)] = x(nT-kT) = x_k\dashrightarrow R_{x_{k}}(nT) = 5nTx^2(nT-kT)$$
 $$R_x(nT) = 5nTx^2(nT)\dashrightarrow T_k[R_x(nT))] = 5(nT-kT)x^2(nT-kT)$$
-Las ecuaciones son diferentes por lo tanto no es invariante en el tiempo.
+Las ecuaciones son diferentes por lo tanto no es invariante en el tiempo.\\
+Es causal?\\
+Tengamos las siguientes entradas $x_1$ y $x_2$ definidas de la siguiente manera:\\
+\begin{equation*}
+\left\{
+\begin{aligned}
+x_1 & = x_2 \quad\text{Para todo}\quad n\leq k\\
+x_1 & \neq x_2 \quad\text{Para el resto}
+\end{aligned}
+\right.
+\end{equation*}
 
-\section{Parte E}
+$$R_{x_{1}}(nT) = 5nT{x_1}^2(nT)$$
+$$R_{x_{2}}(nT) = 5nT{x_2}^2(nT)$$
+Las evalu\'o en $n=k$;\\
+$$R_{x_{1}}(kT) = 5nT{x_1}^2(kT)$$
+$$R_{x_{2}}(kT) = 5nT{x_2}^2(kT)$$
+Las ecuaciones son iguales para todo $n\leq k$, luego es causal.\\
+Es Lineal?\\
+$$aR_x(nT) = a5nTx^2(nT)$$
+$$ax(nT)=g(nT)\dashrightarrow R_g(nT) = 5nTg^2(nT) =5nTa^2x^2(nT) $$
+Las ecuaciones son diferentes, entonces no es lineal.\\
+\section{Parte e}
+Tenemos el siguiente filtro:
+$$R_x(nT) = 3x(nT+3T)$$
+Ya podemos observar que este va a no ser causal. Pero vamos a demostrarlo a continuaci\'on.\\
+Es invariante en el tiempo?\\
+Siendo $T_k$ un retardo en el tiempo k veces.\\
+$$T_k[x(nT)] = x(nT-kT) = x_k\dashrightarrow R_{x_{k}}(nT) = 3x(nT-kT+3T)$$
+$$R_x(nT) = 3x(nT+3T)\dashrightarrow T_k[R_x(nT))] = 3x(nT+3T-kT)$$
+Las ecuaciones son iguales por lo tanto es invariante en el tiempo.\\
+Es causal?\\
+Tengamos las siguientes entradas $x_1$ y $x_2$ definidas de la siguiente manera:\\
+\begin{equation*}
+\left\{
+\begin{aligned}
+x_1 & = x_2 \quad\text{Para todo}\quad n\leq k\\
+x_1 & \neq x_2 \quad\text{Para el resto}
+\end{aligned}
+\right.
+\end{equation*}
 
+$$R_{x_{1}}(nT) = 3x_1(nT+3T)$$
+$$R_{x_{2}}(nT) = 3x_2(nT+3T)$$
+Las evalu\'o en $n=k$;\\
+$$R_{x_{1}}(kT) = 3x_1(kT+3T)$$
+$$R_{x_{2}}(kT) = 3x_2(kT+3T)$$
+Las ecuaciones son iguales para todo $n\leq k-3$, luego no es causal.\\
+Es Lineal?\\
+$$aR_x(nT) = a3x(nT+3T)$$
+$$ax(nT)=g(nT)\dashrightarrow R_g(nT) = 3g(nT+3T) = 3ax(nT+3T) $$
+Las ecuaciones son iguales, entonces es lineal.\\
 
-\section{Parte I}
+\section{Parte i}
+Tenemos el siguiente filtro:
+$$R_x(nT) = x(nT+T)e^{-nT}$$
+Ya podemos observar que este va a no ser causal. Pero vamos a demostrarlo a continuaci\'on.\\
+Es invariante en el tiempo?\\
+Siendo $T_k$ un retardo en el tiempo k veces.\\
+$$T_k[x(nT)] = x(nT-kT) = x_k\dashrightarrow R_{x_{k}}(nT) = x(nT-kT+T)e^{-nT}$$
+$$R_x(nT) = x(nT+T)e^{-nT}\dashrightarrow T_k[R_x(nT))] = x(nT+T-kT)e^{-nT+kT}$$
+Las ecuaciones son diferentes por lo tanto no es invariante en el tiempo.\\
+Es causal?\\
+Tengamos las siguientes entradas $x_1$ y $x_2$ definidas de la siguiente manera:\\
+\begin{equation*}
+\left\{
+\begin{aligned}
+x_1 & = x_2 \quad\text{Para todo}\quad n\leq k\\
+x_1 & \neq x_2 \quad\text{Para el resto}
+\end{aligned}
+\right.
+\end{equation*}
 
+$$R_{x_{1}}(nT) = x_1(nT+T)e^{-nT}$$
+$$R_{x_{2}}(nT) = x_2(nT+T)e^{-nT}$$
+Las evalu\'o en $n=k$;\\
+$$R_{x_{1}}(kT) = x_1(kT+T)e^{-kT}$$
+$$R_{x_{2}}(kT) = x_2(kT+T)e^{-kT}$$
+Las ecuaciones son iguales para todo $n\leq k-1$, luego no es causal.\\
+Es Lineal?\\
+$$aR_x(nT) = ax(nT+T)e^{-nT}$$
+$$ax(nT)=g(nT)\dashrightarrow R_g(nT) = g(nT+T)e^{-nT} = ax(nT+T)e^{-nT} $$
+Las ecuaciones son iguales, entonces es lineal.\\
+
+\chapter*{Ejercicio 2}
+\addcontentsline{toc}{chapter}{Ejercicio 2}
+
+\section{Parte b}
 
 \end{document}
