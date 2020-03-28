@@ -109,5 +109,38 @@ Las ecuaciones son iguales, entonces es lineal.\\
 \addcontentsline{toc}{chapter}{Ejercicio 2}
 
 \section{Parte b}
+Tenemos la siguiente red a analizar:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = .5\textwidth]{Red.png}
+    \label{fig:Red}
+\end{figure}
+Creando una variable intermedia e(nT), tenemos que el esquema de la red cambia a:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = .5\textwidth]{RedEstudiada.png}
+    \label{fig:Red}
+\end{figure}
+Obtenemos las siguientes ecuaciones:\\
+\begin{equation*}
+\left\{
+\begin{aligned}
+y(nT) & = e(nT) + e(nT-T) \\
+e(nT) & = x(nT) + e(nT-T) -0,5 e(nT-2T)
+\end{aligned}
+\right.
+\end{equation*}
 
+A partir de la ecuaci\'on de y(nT), obtengo que $e(nT-T)=y(nT)-e(nT)$ y reemplazando esto en la otra ecuaci\'on terminamos obteniendo:
+$$e(nT)= x(nT) + e(nT-T) -0,5 [y(nT-T)-e(nT-T)]$$
+$$e(nT)= x(nT) + 1,5e(nT-T) -0,5y(nT-T)$$
+$$e(nT)= x(nT) + 1,5[y(nT)-e(nT)] -0,5y(nT-T)$$
+$$2,5e(nT)= x(nT) + 1,5y(nT) -0,5y(nT-T)$$
+$$e(nT)= \frac{2}{5} x(nT) + \frac{3}{5}y(nT) -\frac{1}{5}y(nT-T)$$
+Utilizando la formula reci\'en obtenida para e(nT) en la ecuaci\'on de y(nT), conseguimos:
+$$y(nT) = \left[ \frac{2}{5} x(nT) + \frac{3}{5}y(nT) -\frac{1}{5} y(nT-T)\right] + \left[ \frac{2}{5} x(nT-T) + \frac{3}{5} y(nT-T) -\frac{1}{5} y(nT-2T)\right]$$
+$$y(nT) =  \frac{2}{5} x(nT)  + \frac{2}{5} x(nT-T) + \frac{3}{5}y(nT) + \frac{2}{5} y(nT-T) -\frac{1}{5} y(nT-2T)$$
+$$\frac{2}{5}y(nT) =  \frac{2}{5} x(nT)  + \frac{2}{5} x(nT-T) + \frac{2}{5} y(nT-T) -\frac{1}{5} y(nT-2T)$$
+Finalmente obteniendo la siguiente ecuación diferencial:
+$$y(nT) =  x(nT)  + x(nT-T) + y(nT-T) -0,5 y(nT-2T)$$
 \end{document}
