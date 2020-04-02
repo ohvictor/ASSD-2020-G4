@@ -1,3 +1,32 @@
 \chapter{Filtro Pasa Bajos}
+Se diseñaron filtros pasa bajos para funcionar como el Filtro Anti Alias (FAA) y el Filtro Recuperador (FR) en el esquema a implementar.
+\section{Especificaciones del Filtro}
+Se pidió que el Filtro Pasa Bajos cumpla con las siguientes especificaciones:
 
-sadflaksjdfowiej
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        $f_a$  &   $A_p$   &   $A_a$    \\
+        \hline
+        $1.5 f_p$   &   $1 \si{\deci\bel}$ &   $41 \si{\deci\bel}$    \\
+        \hline
+    \end{tabular}
+    \caption{Especificaciones de los Filtros Pasa Bajo}
+\end{table}
+
+Se eligió un $fp = 50 \si{\kilo\hertz}$ dado que las señales que serán muestreadas son 
+
+\section{Realización del Filtro}
+
+Para implementar el filtro pasa bajos se utilizaron celdas Rauch de construcción pasa bajos. Su esquema se muestra en la Figura \ref{fig:Rauch-Cell}.
+
+\begin{figure}[ht]
+    \centering
+    \input{rauch.tex}
+    \caption{Celda Rauch}
+    \label{fig:Rauch-Cell}
+\end{figure}
+
+
+
