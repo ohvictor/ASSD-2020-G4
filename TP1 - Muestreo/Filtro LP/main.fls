@@ -236,6 +236,7 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT c:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\Filtro LP\rauch.tex
 INPUT c:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\Filtro LP\rauch.tex
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
@@ -250,6 +251,8 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmbsy5.tfm
 OUTPUT c:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\Filtro LP\main.pdf
 INPUT C:\Users\ohvic\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT c:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\Filtro LP\main.aux
+INPUT C:\Users\ohvic\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
+INPUT C:\Users\ohvic\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbsy10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbsy10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
