@@ -28,5 +28,41 @@ Para implementar el filtro pasa bajos se utilizaron celdas Rauch de construcció
     \label{fig:Rauch-Cell}
 \end{figure}
 
+La transferencia total de esta celda estará dada por la expresión:
+\begin{equation}
+    H(s)=\frac{R_3}{R_1}\cdot\frac{1/R_3 R_2 C_1 C_2}{s^2+s \frac{1}{C_1}(1/R_1+1/R_2+1/R_3)+1/R_2 R_3 C_1 C_2}
+\end{equation}
 
+Comparando con la expresión general de la transferencia de un filtro pasabajos de segundo orden:
 
+\begin{equation*}
+    H(s)=\frac{K \omega_0^2}{s^2 +s\frac{\omega_0}{Q_0}+\omega_0 ^2}
+\end{equation*}
+
+Se obtiene que:
+\begin{align}
+    K   &=  \frac{R_3}{R_1}\\
+    \omega_0^2  &=  \frac{1}{R_2 R_3 C_1 C_2}\\
+    \frac{\omega_0}{Q_0}    &=  \frac{1}{C_1}\left(\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}\right)
+\end{align}
+
+Dado que se desea que la ganancia en continua sea $H(0)=0\si{\deci\bel}$, se puede tomar $R_3 = R_1 = R$. Se definió entonces también $R_2=a^2R$ y $C_1 = k^2 C_2 = k^2 C$. Por lo tanto, la transferencia de la celda resulta en:
+
+\begin{align}
+    K&=1\\
+    \omega_0^2&=\frac{1}{a^2 R^2 k^2 C^2} \Rightarrow \omega =\frac{1}{ak}\cdot\frac{1}{R C}\\
+    \frac{\omega_0}{Q_0} &= \frac{1}{k^2 C} \left(\frac{2}{R}+\frac{1}{a^2 R}\right) \label{eq:filterwo/Q0}
+\end{align}
+
+Operando sobre \eqref{eq:filterwo/Q0} se obtiene
+
+\begin{align*}
+    \frac{1}{Q_0} &= \frac{1}{k^2 a^2 RC}\left(2 a^2 + 1 \right)\cdot kaRC\\
+    \frac{1}{Q_0} &= \frac{1}{ka} \left(2a^2+1\right)\\
+    Q_0 &= \frac{ka}{2a^2+1}
+\end{align*}
+
+Por lo tanto la expresión del factor de calidad de la celda $Q_0$ estará dada por
+\begin{equation}
+    Q_0 = \frac{ka}{2a^2+1}
+\end{equation}
