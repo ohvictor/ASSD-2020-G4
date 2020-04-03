@@ -1,0 +1,14 @@
+* C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\Filtro LP\SPICE\LPRauch.asc
+XU1 0 N002 +Vcc -Vcc Vout TL082
+V1 Vin 0 AC 1
+V2 +Vcc 0 +15
+V3 -Vcc 0 -15
+R1 N001 Vin 1.1k
+R2 N002 N001 2.05k
+R3 N001 Vout 1.1k
+C1 N001 0 43n
+C2 Vout N002 100p
+.ac dec 100 1k 1Meg
+.lib C:\Users\ohvic\Downloads\TL082.301
+.backanno
+.end
