@@ -1,0 +1,112 @@
+\chapter{Filtro Pasa Bajos}
+Se diseñaron filtros pasa bajos para funcionar como el Filtro Anti Alias (FAA) y el Filtro Recuperador (FR) en el esquema a implementar.
+\section{Especificaciones del Filtro}
+Se pidió que el Filtro Pasa Bajos cumpla con las siguientes especificaciones:
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        $f_a$  &   $A_p$   &   $A_a$    \\
+        \hline
+        $1.5 f_p$   &   $1 \si{\deci\bel}$ &   $41 \si{\deci\bel}$    \\
+        \hline
+    \end{tabular}
+    \caption{Especificaciones de los Filtros Pasa Bajo}
+\end{table}
+
+Se eligió un $fp = 50 \si{\kilo\hertz}$ dado que las señales que serán muestreadas son \dots
+
+Usando un programa de diseño de filtros, se obtuvo que para estas especificaciones, utilizando la aproximación de Legendre, se obtiene un filtro de orden $n=8$. Para su implementación, se utilizaron $4$ filtros de segundo orden en cascada.
+
+Con la información obtenida del programa de diseño de filtros, se conoció que las características de cada celda implementada debería cumplir con las siguientes características:
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        N° Celda    & $f_0(\si{\kilo\hertz})$ & $Q_0$ \\
+        \hline
+        1   & 51.05 & 6.04  \\
+        2   & 44.37 & 1.84  \\
+        3   & 33.69 & 0.91  \\
+        4   & 24.40 & 0.54  \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\section{Realización del Filtro}
+
+Para implementar el filtro pasa bajos se utilizaron celdas Rauch de construcción pasa bajos. Su esquema se muestra en la Figura \ref{fig:Rauch-Cell}.
+
+\begin{figure}[ht]
+    \centering
+    \input{rauch.tex}
+    \caption{Celda Rauch}
+    \label{fig:Rauch-Cell}
+\end{figure}
+
+La transferencia total de esta celda estará dada por la expresión:
+\begin{equation}
+    H(s)=\frac{R_3}{R_1}\cdot\frac{1/R_3 R_2 C_1 C_2}{s^2+s \frac{1}{C_1}(1/R_1+1/R_2+1/R_3)+1/R_2 R_3 C_1 C_2}
+\end{equation}
+
+Comparando con la expresión general de la transferencia de un filtro pasabajos de segundo orden:
+
+\begin{equation*}
+    H(s)=\frac{K \omega_0^2}{s^2 +s\frac{\omega_0}{Q_0}+\omega_0 ^2}
+\end{equation*}
+
+Se obtiene que:
+\begin{align}
+    K   &=  \frac{R_3}{R_1}\\
+    \omega_0^2  &=  \frac{1}{R_2 R_3 C_1 C_2}\\
+    \frac{\omega_0}{Q_0}    &=  \frac{1}{C_1}\left(\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}\right)
+\end{align}
+
+Dado que se desea que la ganancia en continua sea $H(0)=0\si{\deci\bel}$, se puede tomar $R_3 = R_1 = R$. Se definió entonces también $R_2=a^2R$ y $C_1 = k^2 C_2 = k^2 C$. Por lo tanto, la transferencia de la celda resulta:
+
+\begin{align}
+    K&=1\\
+    \omega_0^2&=\frac{1}{a^2 R^2 k^2 C^2} \Rightarrow \omega_0 =\frac{1}{ka}\cdot\frac{1}{R C}\\
+    \frac{\omega_0}{Q_0} &= \frac{1}{k^2 C} \left(\frac{2}{R}+\frac{1}{a^2 R}\right) \label{eq:filterwo/Q0}
+\end{align}
+
+Operando sobre \eqref{eq:filterwo/Q0} se obtiene
+
+\begin{align*}
+    \frac{1}{Q_0} &= \frac{1}{k^2 a^2 RC}\left(2 a^2 + 1 \right)\cdot kaRC\\
+    \frac{1}{Q_0} &= \frac{1}{ka} \left(2a^2+1\right)\\
+    Q_0 &= \frac{ka}{2a^2+1}
+\end{align*}
+
+Por lo tanto la expresión del factor de calidad de la celda $Q_0$ estará dada por
+\begin{equation}
+    Q_0 = \frac{ka}{2a^2+1}
+\end{equation}
+
+Entonces, definiendo nuestras resistencias y capacidades base (TOMAR UN CRITERIO) se pueden calcular las relaciones entre resistencias y capacidades entre cada componente:
+
+\begin{align*}
+    ka &= \frac{1}{\omega_0 RC}\\
+    a^2&= 0.5\left(\frac{ka}{Q_0}-1\right)\\
+    k^2&= \frac{1}{\omega_0^2 a^2 R^2 C^2}
+\end{align*}
+
+En primer lugar, se definió como resistencia base $R=1\si{\kilo\ohm}$ y como capacitancia base $C=100\si{\pico\farad}$. Luego, teniendo en cuenta los valores y expresiones anteriores, se obtuvo el valor necesario para cada componente.
+
+\begin{table}[ht]
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|}
+            \hline
+            Celda   &  $f_0(\si{\kilo\hertz})$   &   $Q_0$   &   $R_1 (\si{\kilo\ohm})$&$R_2(\si{\kilo\ohm})$&$R_3(\si{\kilo\ohm})$&$C_1(\si{\nano\farad})$&$C_2(\si{\pico\farad})$   \\
+            \hline
+            1   & 51.05 & 6.04  & 1.00  & 2.08  & 1.00  & 46.7  & 100   \\
+            2   & 44.37 & 1.84  & 1.00  & 9.25  & 1.00  & 13.9  & 100   \\
+            3   & 33.69 & 0.91  & 1.00  & 25.5  & 1.00  & 8.77  & 100   \\
+            4   & 24.40 & 0.54  & 1.00  & 59.9  & 1.00  & 7.10  & 100   \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Valores de los componentes para cada una de sus celdas}
+\end{table}

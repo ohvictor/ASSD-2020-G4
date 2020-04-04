@@ -1,0 +1,13 @@
+\begin{circuitikz}[american voltages]
+\draw
+(0,0) node[op amp] (opamp) {}
+(opamp.+) node[ground]{}
+(opamp.-) to[resistor=$R_2$,*-*] ++(-3,0) coordinate(tmp)
+(tmp) to[capacitor=$C_1$] ++(0,-2) node[ground]{}
+(tmp) to[resistor=$R_1$,-o] ++(-3,0) node[left]{$V_{in}$}
+(opamp.out) to[short] ++(0,2) coordinate(tmp1) to [short] ++(0,1) coordinate(tmp2)
+(tmp1) to[capacitor=$C_2$] ++(-2,0) -| (opamp.-)
+(tmp2) to[resistor,l_=$R_3$] ++(-2,0) -| (tmp)
+(opamp.out) to[short,-o] ++(1,0) node[right]{$V_{out}$}
+;
+\end{circuitikz}
