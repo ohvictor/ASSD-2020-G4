@@ -1,0 +1,15 @@
+Added Pin To Net: NetName=Vout_FAA Pin=FSH-2
+Added Pin To Net: NetName=+VCC Pin=J1-1
+Added Pin To Net: NetName=GND Pin=J1-2
+Added Pin To Net: NetName=-VCC Pin=J1-3
+Added Pin To Net: NetName=Vout_FAA Pin=JFAA-1
+Added Pin To Net: NetName=Vout_FR Pin=JFR-1
+Added Pin To Net: NetName=NetJAS_1 Pin=R11_FR-1
+Added Pin To Net: NetName=Vout_FAA Pin=TPFAA-1
+Added Pin To Net: NetName=Vout_FR Pin=TPXo-1
+Change Net Name : Old Net Name=Vout_FAA New Net Name=NetC42_FAA_1
+Change Net Name : Old Net Name=Vout_FR New Net Name=NetC42_FR_1
+Added Pin To Net: NetName=NetJFAA_2 Pin=JFAA-2
+Added Pin To Net: NetName=NetJFAA_2 Pin=R11_FAA-1
+Added Pin To Net: NetName=NetJFAA_2 Pin=TPXi-1
+Added Net: Name=NetJFAA_2

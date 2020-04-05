@@ -1,0 +1,3 @@
+Remove Pin=R21-1 From Net=V1out
+Remove Pin=R31-1 From Net=V2out
+Remove Pin=R41-1 From Net=V3out

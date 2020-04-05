@@ -1,0 +1,6 @@
+Added Pin To Net: NetName=V1out_FAA Pin=R21_FAA-1
+Added Pin To Net: NetName=V1out_FR Pin=R21_FR-1
+Added Pin To Net: NetName=V2out_FAA Pin=R31_FAA-1
+Added Pin To Net: NetName=V2out_FR Pin=R31_FR-1
+Added Pin To Net: NetName=V3out_FAA Pin=R41_FAA-1
+Added Pin To Net: NetName=V3out_FR Pin=R41_FR-1

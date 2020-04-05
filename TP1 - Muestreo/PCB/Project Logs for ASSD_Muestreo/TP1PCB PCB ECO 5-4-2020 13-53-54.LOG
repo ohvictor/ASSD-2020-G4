@@ -1,0 +1,4 @@
+Added Component: Designator=J1(SIP3 90)
+Add component. Clean all parameters for all variants
+Added Member To Class: ClassName=TP1SCH Member=Component J1 Alimentación
+Added Room: Name=TP1SCH
