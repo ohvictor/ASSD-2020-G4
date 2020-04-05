@@ -1,0 +1,40 @@
+Circuit: * C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\SH\sh.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-05
+Gmin = 1.6455e-06
+Gmin = 1.76685e-07
+Gmin = 1.89714e-08
+Gmin = 2.03704e-09
+Gmin = 2.18725e-10
+Gmin = 2.34854e-11
+Gmin = 2.52173e-12
+Gmin = 2.70769e-13
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+
+Date: Sun Apr  5 17:11:14 2020
+Total elapsed time: 0.150 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 7903
+traniter = 7539
+tranpoints = 2112
+accept = 1588
+rejected = 524
+matrix size = 45
+fillins = 14
+solver = Normal
+Matrix Compiler1: 2.48 KB object code size  0.5/0.3/[0.1]
+Matrix Compiler2: 3.92 KB object code size  0.4/0.5/[0.4]
+

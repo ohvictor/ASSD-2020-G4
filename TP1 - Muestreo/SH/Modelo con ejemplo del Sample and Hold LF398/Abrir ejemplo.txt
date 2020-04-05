@@ -1,0 +1,6 @@
+El modulo Sample and Hold viene con 8 pines.
+
+Para poder cambiar alternar entre modo Sample y modo Hold es necesario darle al integrado una señal de clock. Además hay que especificar la linea de decisión. 
+
+Ejemplo:
+ Supongamos que nuestra señal de clock es bipolar (+10V representa modo HGH
