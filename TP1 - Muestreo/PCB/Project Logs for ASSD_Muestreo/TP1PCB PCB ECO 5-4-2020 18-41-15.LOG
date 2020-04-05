@@ -1,0 +1,382 @@
+Added Component: Designator=C1_FAA(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C1_FR(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C2_FAA(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C2_FR(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C11_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C11_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C12_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C12_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C21_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C21_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C22_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C22_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C31_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C31_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C32_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C32_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C41_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C41_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C42_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C42_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Ch(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=JAS(JUMPER3)
+Add component. Clean all parameters for all variants
+Added Component: Designator=JFAA(JUMPER3)
+Add component. Clean all parameters for all variants
+Added Component: Designator=JFR(JUMPER3)
+Add component. Clean all parameters for all variants
+Added Component: Designator=JSH(JUMPER3)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R11_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R11_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R12_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R12_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R13_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R13_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R21_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R21_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R22_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R22_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R23_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R23_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R31_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R31_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R32_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R32_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R33_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R33_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R41_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R41_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R42_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R42_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R43_FAA(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R43_FR(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Rf(RES400)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Rp(POTENCIOMETRO)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TPAS(TPTH)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TPFAA(TPTH)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TPFR(TPTH)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TPSH(TPTH)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U1_FAA(TI-N14)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "CMRR(Min)(dB)"; Value = "75"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Code_JEDEC"; Value = "MS-001"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.ti.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.ti.com/lit/ds/symlink/tl084a.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.ti.com/lit/ml/mpdi002c/mpdi002c.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "SLOS081G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Eco-Plan"; Value = "Pb-Free (RoHS)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GBW(Typ)(MHz)"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "IIB(Max)(pA)"; Value = "200"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Iq per channel(Max)(mA)"; Value = "2.8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Channels"; Value = "4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Offset Drift(Typ)(uV/C)"; Value = "18"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "14-Pin Plastic In-Line, Body 19.305 x 6.35 mm, Pitch 2.54 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "N14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "4040049/E, 12/2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "TL084ACN"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "Catalog"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Slew Rate(Typ)(V/us)"; Value = "13"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Sub Family"; Value = "General Purpose Amplifier, High Supply Voltage Amplifier (>=30V)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 2"; Value = "Farnell"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 3"; Value = "Newark"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 4"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "296-1782-5-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 2"; Value = "1106129"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 3"; Value = "08F9361"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 4"; Value = "595-TL084ACN"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Total Supply Voltage(Max)(+5V is 5, +/-5V is 10)"; Value = "36"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Total Supply Voltage(Min)(+5V is 5, +/-5V is 10)"; Value = "7"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vio (25C)(Max)(mV)"; Value = "6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vn at 1kHz(Typ)(nV/rtHz)"; Value = "18"; VariantName = "[No Variations]"
+Added Component: Designator=U1_FR(TI-N14)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "CMRR(Min)(dB)"; Value = "75"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Code_JEDEC"; Value = "MS-001"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.ti.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.ti.com/lit/ds/symlink/tl084a.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.ti.com/lit/ml/mpdi002c/mpdi002c.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "SLOS081G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Eco-Plan"; Value = "Pb-Free (RoHS)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GBW(Typ)(MHz)"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "IIB(Max)(pA)"; Value = "200"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Iq per channel(Max)(mA)"; Value = "2.8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Channels"; Value = "4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Offset Drift(Typ)(uV/C)"; Value = "18"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "14-Pin Plastic In-Line, Body 19.305 x 6.35 mm, Pitch 2.54 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "N14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "4040049/E, 12/2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "TL084ACN"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "Catalog"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Slew Rate(Typ)(V/us)"; Value = "13"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Sub Family"; Value = "General Purpose Amplifier, High Supply Voltage Amplifier (>=30V)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 2"; Value = "Farnell"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 3"; Value = "Newark"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 4"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "296-1782-5-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 2"; Value = "1106129"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 3"; Value = "08F9361"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 4"; Value = "595-TL084ACN"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Total Supply Voltage(Max)(+5V is 5, +/-5V is 10)"; Value = "36"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Total Supply Voltage(Min)(+5V is 5, +/-5V is 10)"; Value = "7"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vio (25C)(Max)(mV)"; Value = "6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vn at 1kHz(Typ)(nV/rtHz)"; Value = "18"; VariantName = "[No Variations]"
+Added Component: Designator=U1(DIP8)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=+VCC Pin=C1_FAA-1
+Added Pin To Net: NetName=+VCC Pin=C1_FR-1
+Added Pin To Net: NetName=+VCC Pin=Rp-1
+Added Pin To Net: NetName=+VCC Pin=U1-1
+Added Pin To Net: NetName=+VCC Pin=U1_FAA-4
+Added Pin To Net: NetName=+VCC Pin=U1_FR-4
+Added Net: Name=+VCC
+Added Pin To Net: NetName=-VCC Pin=C2_FAA-1
+Added Pin To Net: NetName=-VCC Pin=C2_FR-1
+Added Pin To Net: NetName=-VCC Pin=U1-4
+Added Pin To Net: NetName=-VCC Pin=U1_FAA-11
+Added Pin To Net: NetName=-VCC Pin=U1_FR-11
+Added Net: Name=-VCC
+Added Pin To Net: NetName=GND Pin=C1_FAA-2
+Added Pin To Net: NetName=GND Pin=C1_FR-2
+Added Pin To Net: NetName=GND Pin=C2_FAA-2
+Added Pin To Net: NetName=GND Pin=C2_FR-2
+Added Pin To Net: NetName=GND Pin=C11_FAA-2
+Added Pin To Net: NetName=GND Pin=C11_FR-2
+Added Pin To Net: NetName=GND Pin=C21_FAA-2
+Added Pin To Net: NetName=GND Pin=C21_FR-2
+Added Pin To Net: NetName=GND Pin=C31_FAA-2
+Added Pin To Net: NetName=GND Pin=C31_FR-2
+Added Pin To Net: NetName=GND Pin=C41_FAA-2
+Added Pin To Net: NetName=GND Pin=C41_FR-2
+Added Pin To Net: NetName=GND Pin=Ch-2
+Added Pin To Net: NetName=GND Pin=Rf-1
+Added Pin To Net: NetName=GND Pin=U1-7
+Added Pin To Net: NetName=GND Pin=U1_FAA-3
+Added Pin To Net: NetName=GND Pin=U1_FAA-5
+Added Pin To Net: NetName=GND Pin=U1_FAA-10
+Added Pin To Net: NetName=GND Pin=U1_FAA-12
+Added Pin To Net: NetName=GND Pin=U1_FR-3
+Added Pin To Net: NetName=GND Pin=U1_FR-5
+Added Pin To Net: NetName=GND Pin=U1_FR-10
+Added Pin To Net: NetName=GND Pin=U1_FR-12
+Added Net: Name=GND
+Added Pin To Net: NetName=NetCh_1 Pin=Ch-1
+Added Pin To Net: NetName=NetCh_1 Pin=U1-6
+Added Net: Name=NetCh_1
+Added Pin To Net: NetName=NetJAS_1 Pin=JAS-1
+Added Pin To Net: NetName=NetJAS_1 Pin=TPAS-1
+Added Net: Name=NetJAS_1
+Added Pin To Net: NetName=NetJAS_2 Pin=JAS-2
+Added Pin To Net: NetName=NetJAS_2 Pin=JFR-3
+Added Pin To Net: NetName=NetJAS_2 Pin=R11_FR-1
+Added Net: Name=NetJAS_2
+Added Pin To Net: NetName=NetJAS_3 Pin=JAS-3
+Added Pin To Net: NetName=NetJAS_3 Pin=JSH-2
+Added Net: Name=NetJAS_3
+Added Pin To Net: NetName=NetJFAA_2 Pin=JFAA-2
+Added Pin To Net: NetName=NetJFAA_2 Pin=JSH-3
+Added Pin To Net: NetName=NetJFAA_2 Pin=U1-3
+Added Net: Name=NetJFAA_2
+Added Pin To Net: NetName=NetJSH_1 Pin=JSH-1
+Added Pin To Net: NetName=NetJSH_1 Pin=TPSH-1
+Added Pin To Net: NetName=NetJSH_1 Pin=U1-5
+Added Net: Name=NetJSH_1
+Added Pin To Net: NetName=NetRf_2 Pin=Rf-2
+Added Pin To Net: NetName=NetRf_2 Pin=Rp-3
+Added Net: Name=NetRf_2
+Added Pin To Net: NetName=NetRp_2 Pin=Rp-2
+Added Pin To Net: NetName=NetRp_2 Pin=U1-2
+Added Net: Name=NetRp_2
+Added Pin To Net: NetName=NetU1_8 Pin=U1-8
+Added Net: Name=NetU1_8
+Added Pin To Net: NetName=V1out_FAA Pin=C12_FAA-1
+Added Pin To Net: NetName=V1out_FAA Pin=R13_FAA-1
+Added Pin To Net: NetName=V1out_FAA Pin=R21_FAA-1
+Added Pin To Net: NetName=V1out_FAA Pin=U1_FAA-1
+Added Net: Name=V1out_FAA
+Added Pin To Net: NetName=V1out_FR Pin=C12_FR-1
+Added Pin To Net: NetName=V1out_FR Pin=R13_FR-1
+Added Pin To Net: NetName=V1out_FR Pin=R21_FR-1
+Added Pin To Net: NetName=V1out_FR Pin=U1_FR-1
+Added Net: Name=V1out_FR
+Added Pin To Net: NetName=V2out_FAA Pin=C22_FAA-1
+Added Pin To Net: NetName=V2out_FAA Pin=R23_FAA-1
+Added Pin To Net: NetName=V2out_FAA Pin=R31_FAA-1
+Added Pin To Net: NetName=V2out_FAA Pin=U1_FAA-7
+Added Net: Name=V2out_FAA
+Added Pin To Net: NetName=V2out_FR Pin=C22_FR-1
+Added Pin To Net: NetName=V2out_FR Pin=R23_FR-1
+Added Pin To Net: NetName=V2out_FR Pin=R31_FR-1
+Added Pin To Net: NetName=V2out_FR Pin=U1_FR-7
+Added Net: Name=V2out_FR
+Added Pin To Net: NetName=V3out_FAA Pin=C32_FAA-1
+Added Pin To Net: NetName=V3out_FAA Pin=R33_FAA-1
+Added Pin To Net: NetName=V3out_FAA Pin=R41_FAA-1
+Added Pin To Net: NetName=V3out_FAA Pin=U1_FAA-8
+Added Net: Name=V3out_FAA
+Added Pin To Net: NetName=V3out_FR Pin=C32_FR-1
+Added Pin To Net: NetName=V3out_FR Pin=R33_FR-1
+Added Pin To Net: NetName=V3out_FR Pin=R41_FR-1
+Added Pin To Net: NetName=V3out_FR Pin=U1_FR-8
+Added Net: Name=V3out_FR
+Added Pin To Net: NetName=V4out_FAA Pin=C42_FAA-1
+Added Pin To Net: NetName=V4out_FAA Pin=JFAA-1
+Added Pin To Net: NetName=V4out_FAA Pin=R43_FAA-1
+Added Pin To Net: NetName=V4out_FAA Pin=TPFAA-1
+Added Pin To Net: NetName=V4out_FAA Pin=U1_FAA-14
+Added Net: Name=V4out_FAA
+Added Pin To Net: NetName=V4out_FR Pin=C42_FR-1
+Added Pin To Net: NetName=V4out_FR Pin=JFR-1
+Added Pin To Net: NetName=V4out_FR Pin=R43_FR-1
+Added Pin To Net: NetName=V4out_FR Pin=TPFR-1
+Added Pin To Net: NetName=V4out_FR Pin=U1_FR-14
+Added Net: Name=V4out_FR
+Added Pin To Net: NetName=V-1_FAA Pin=C12_FAA-2
+Added Pin To Net: NetName=V-1_FAA Pin=R12_FAA-2
+Added Pin To Net: NetName=V-1_FAA Pin=U1_FAA-2
+Added Net: Name=V-1_FAA
+Added Pin To Net: NetName=V-1_FR Pin=C12_FR-2
+Added Pin To Net: NetName=V-1_FR Pin=R12_FR-2
+Added Pin To Net: NetName=V-1_FR Pin=U1_FR-2
+Added Net: Name=V-1_FR
+Added Pin To Net: NetName=V-2_FAA Pin=C22_FAA-2
+Added Pin To Net: NetName=V-2_FAA Pin=R22_FAA-2
+Added Pin To Net: NetName=V-2_FAA Pin=U1_FAA-6
+Added Net: Name=V-2_FAA
+Added Pin To Net: NetName=V-2_FR Pin=C22_FR-2
+Added Pin To Net: NetName=V-2_FR Pin=R22_FR-2
+Added Pin To Net: NetName=V-2_FR Pin=U1_FR-6
+Added Net: Name=V-2_FR
+Added Pin To Net: NetName=V-3_FAA Pin=C32_FAA-2
+Added Pin To Net: NetName=V-3_FAA Pin=R32_FAA-2
+Added Pin To Net: NetName=V-3_FAA Pin=U1_FAA-9
+Added Net: Name=V-3_FAA
+Added Pin To Net: NetName=V-3_FR Pin=C32_FR-2
+Added Pin To Net: NetName=V-3_FR Pin=R32_FR-2
+Added Pin To Net: NetName=V-3_FR Pin=U1_FR-9
+Added Net: Name=V-3_FR
+Added Pin To Net: NetName=V-4_FAA Pin=C42_FAA-2
+Added Pin To Net: NetName=V-4_FAA Pin=R42_FAA-2
+Added Pin To Net: NetName=V-4_FAA Pin=U1_FAA-13
+Added Net: Name=V-4_FAA
+Added Pin To Net: NetName=V-4_FR Pin=C42_FR-2
+Added Pin To Net: NetName=V-4_FR Pin=R42_FR-2
+Added Pin To Net: NetName=V-4_FR Pin=U1_FR-13
+Added Net: Name=V-4_FR
+Added Pin To Net: NetName=Vx1_FAA Pin=C11_FAA-1
+Added Pin To Net: NetName=Vx1_FAA Pin=R11_FAA-2
+Added Pin To Net: NetName=Vx1_FAA Pin=R12_FAA-1
+Added Pin To Net: NetName=Vx1_FAA Pin=R13_FAA-2
+Added Net: Name=Vx1_FAA
+Added Pin To Net: NetName=Vx1_FR Pin=C11_FR-1
+Added Pin To Net: NetName=Vx1_FR Pin=R11_FR-2
+Added Pin To Net: NetName=Vx1_FR Pin=R12_FR-1
+Added Pin To Net: NetName=Vx1_FR Pin=R13_FR-2
+Added Net: Name=Vx1_FR
+Added Pin To Net: NetName=Vx2_FAA Pin=C21_FAA-1
+Added Pin To Net: NetName=Vx2_FAA Pin=R21_FAA-2
+Added Pin To Net: NetName=Vx2_FAA Pin=R22_FAA-1
+Added Pin To Net: NetName=Vx2_FAA Pin=R23_FAA-2
+Added Net: Name=Vx2_FAA
+Added Pin To Net: NetName=Vx2_FR Pin=C21_FR-1
+Added Pin To Net: NetName=Vx2_FR Pin=R21_FR-2
+Added Pin To Net: NetName=Vx2_FR Pin=R22_FR-1
+Added Pin To Net: NetName=Vx2_FR Pin=R23_FR-2
+Added Net: Name=Vx2_FR
+Added Pin To Net: NetName=Vx3_FAA Pin=C31_FAA-1
+Added Pin To Net: NetName=Vx3_FAA Pin=R31_FAA-2
+Added Pin To Net: NetName=Vx3_FAA Pin=R32_FAA-1
+Added Pin To Net: NetName=Vx3_FAA Pin=R33_FAA-2
+Added Net: Name=Vx3_FAA
+Added Pin To Net: NetName=Vx3_FR Pin=C31_FR-1
+Added Pin To Net: NetName=Vx3_FR Pin=R31_FR-2
+Added Pin To Net: NetName=Vx3_FR Pin=R32_FR-1
+Added Pin To Net: NetName=Vx3_FR Pin=R33_FR-2
+Added Net: Name=Vx3_FR
+Added Pin To Net: NetName=Vx4_FAA Pin=C41_FAA-1
+Added Pin To Net: NetName=Vx4_FAA Pin=R41_FAA-2
+Added Pin To Net: NetName=Vx4_FAA Pin=R42_FAA-1
+Added Pin To Net: NetName=Vx4_FAA Pin=R43_FAA-2
+Added Net: Name=Vx4_FAA
+Added Pin To Net: NetName=Vx4_FR Pin=C41_FR-1
+Added Pin To Net: NetName=Vx4_FR Pin=R41_FR-2
+Added Pin To Net: NetName=Vx4_FR Pin=R42_FR-1
+Added Pin To Net: NetName=Vx4_FR Pin=R43_FR-2
+Added Net: Name=Vx4_FR
+Added Pin To Net: NetName=Xin Pin=JFAA-3
+Added Pin To Net: NetName=Xin Pin=R11_FAA-1
+Added Net: Name=Xin
+Added Pin To Net: NetName=Xout Pin=JFR-2
+Added Net: Name=Xout
+Added Class: Name=FAA
+Added Class: Name=FR
+Added Class: Name=SH
+Added Class: Name=TP1SCH
+Added Class: Name=LowPassFilter
+Added Room: Name=FAA
+Added Room: Name=FR
+Added Room: Name=SH
+Added Room: Name=TP1SCH
