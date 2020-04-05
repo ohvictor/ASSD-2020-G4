@@ -1,0 +1,29 @@
+Added Component: Designator=JAS(JUMPER3)
+Add component. Clean all parameters for all variants
+Added Component: Designator=JFAA(JUMPER3)
+Add component. Clean all parameters for all variants
+Added Component: Designator=JFR(JUMPER3)
+Add component. Clean all parameters for all variants
+Added Component: Designator=JSH(JUMPER3)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=V4out_FAA Pin=JFAA-1
+Added Pin To Net: NetName=Xin Pin=JFAA-3
+Added Pin To Net: NetName=V4out_FR Pin=JFR-1
+Added Pin To Net: NetName=NetJAS_2 Pin=JAS-2
+Added Pin To Net: NetName=NetJAS_2 Pin=JFR-3
+Added Pin To Net: NetName=NetJAS_2 Pin=R11_FR-1
+Added Net: Name=NetJAS_2
+Added Pin To Net: NetName=NetJAS_3 Pin=JAS-3
+Added Pin To Net: NetName=NetJAS_3 Pin=JSH-2
+Added Net: Name=NetJAS_3
+Added Pin To Net: NetName=NetJFAA_2 Pin=JFAA-2
+Added Pin To Net: NetName=NetJFAA_2 Pin=JSH-3
+Added Net: Name=NetJFAA_2
+Added Pin To Net: NetName=Xas Pin=JAS-1
+Added Net: Name=Xas
+Added Pin To Net: NetName=Xout Pin=JFR-2
+Added Net: Name=Xout
+Added Pin To Net: NetName=Xsh Pin=JSH-1
+Added Net: Name=Xsh
+Added Class: Name=TP1SCH
+Added Room: Name=TP1SCH

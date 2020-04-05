@@ -1,0 +1,17 @@
+Added Component: Designator=TPAS(TPTH)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TPFAA(TPTH)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TPFR(TPTH)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TPSH(TPTH)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetJAS_1 Pin=TPAS-1
+Added Pin To Net: NetName=V4out_FAA Pin=TPFAA-1
+Added Pin To Net: NetName=V4out_FR Pin=TPFR-1
+Added Pin To Net: NetName=NetJSH_1 Pin=TPSH-1
+Added Member To Class: ClassName=TP1SCH Member=Component TPAS TP
+Added Member To Class: ClassName=TP1SCH Member=Component TPFAA TP
+Added Member To Class: ClassName=TP1SCH Member=Component TPFR TP
+Added Member To Class: ClassName=TP1SCH Member=Component TPSH TP
+Added Room: Name=TP1SCH
