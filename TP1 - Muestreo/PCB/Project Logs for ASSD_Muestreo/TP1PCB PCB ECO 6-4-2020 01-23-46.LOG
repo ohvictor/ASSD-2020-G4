@@ -1,0 +1,15 @@
+Added Component: Designator=CAS1(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=CAS2(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=COSC1(CAP200)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=+VCC Pin=CAS1-1
+Added Pin To Net: NetName=GND Pin=CAS1-2
+Added Pin To Net: NetName=-VCC Pin=CAS2-1
+Added Pin To Net: NetName=GND Pin=CAS2-2
+Added Pin To Net: NetName=+VCC Pin=COSC1-1
+Added Pin To Net: NetName=GND Pin=COSC1-2
+Added Member To Class: ClassName=AS Member=Component CAS1 CAP
+Added Member To Class: ClassName=AS Member=Component CAS2 CAP
+Added Member To Class: ClassName=Osc Member=Component COSC1 CAP

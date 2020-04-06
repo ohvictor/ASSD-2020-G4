@@ -1,0 +1,5 @@
+Added Component: Designator=Jin(SIP2)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=Xin Pin=Jin-1
+Added Pin To Net: NetName=GND Pin=Jin-2
+Added Member To Class: ClassName=TP1SCH Member=Component Jin CON2

@@ -1,0 +1,25 @@
+Added Component: Designator=UAS(DIP14)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=UAS-3
+Added Pin To Net: NetName=GND Pin=UAS-4
+Added Pin To Net: NetName=GND Pin=UAS-5
+Added Pin To Net: NetName=GND Pin=UAS-6
+Added Pin To Net: NetName=-VCC Pin=UAS-7
+Added Pin To Net: NetName=GND Pin=UAS-8
+Added Pin To Net: NetName=NetU1_8 Pin=UAS-13
+Added Pin To Net: NetName=+VCC Pin=UAS-14
+Added Pin To Net: NetName=NetJAS_1 Pin=JAS-1
+Added Pin To Net: NetName=NetJAS_1 Pin=TPAS-1
+Added Pin To Net: NetName=NetJAS_1 Pin=UAS-1
+Added Net: Name=NetJAS_1
+Added Pin To Net: NetName=NetJAS_3 Pin=JAS-3
+Added Pin To Net: NetName=NetJAS_3 Pin=JSH-2
+Added Pin To Net: NetName=NetJAS_3 Pin=UAS-2
+Added Net: Name=NetJAS_3
+Added Pin To Net: NetName=NetUAS_9 Pin=UAS-9
+Added Pin To Net: NetName=NetUAS_9 Pin=UAS-10
+Added Pin To Net: NetName=NetUAS_9 Pin=UAS-11
+Added Pin To Net: NetName=NetUAS_9 Pin=UAS-12
+Added Net: Name=NetUAS_9
+Added Member To Class: ClassName=AS Member=Component UAS CD4066
+Added Room: Name=AS

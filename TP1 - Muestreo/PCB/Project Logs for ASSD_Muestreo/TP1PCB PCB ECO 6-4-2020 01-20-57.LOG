@@ -1,0 +1,10 @@
+Added Component: Designator=CSH1(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=CSH2(CAP200)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=+VCC Pin=CSH1-1
+Added Pin To Net: NetName=GND Pin=CSH1-2
+Added Pin To Net: NetName=-VCC Pin=CSH2-1
+Added Pin To Net: NetName=GND Pin=CSH2-2
+Added Member To Class: ClassName=SH Member=Component CSH1 CAP
+Added Member To Class: ClassName=SH Member=Component CSH2 CAP

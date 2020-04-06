@@ -1,0 +1,11 @@
+Added Pin To Net: NetName=NetCD4066_1 Pin=JAS-1
+Added Pin To Net: NetName=NetCD4066_1 Pin=TPAS-1
+Added Net: Name=NetCD4066_1
+Added Pin To Net: NetName=NetCD4066_2 Pin=JAS-3
+Added Pin To Net: NetName=NetCD4066_2 Pin=JSH-2
+Added Net: Name=NetCD4066_2
+Added Net: Name=NetCD4066_9
+Added Net: Name=NetCD4066_13
+Added Class: Name=AS
+Added Room: Name=AS
+Added Room: Name=TP1SCH

@@ -1,0 +1,6 @@
+Added Component: Designator=JS(SIP3)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=+VCC Pin=JS-1
+Added Pin To Net: NetName=GND Pin=JS-2
+Added Pin To Net: NetName=-VCC Pin=JS-3
+Added Member To Class: ClassName=TP1SCH Member=Component JS Fuente
