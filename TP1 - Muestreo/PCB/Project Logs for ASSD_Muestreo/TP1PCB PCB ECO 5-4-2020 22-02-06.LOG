@@ -1,0 +1,8 @@
+Added Component: Designator=UOsc(DIP8)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=UOsc-1
+Added Pin To Net: NetName=NetU1_8 Pin=UOsc-3
+Added Pin To Net: NetName=+VCC Pin=UOsc-8
+Added Class: Name=Osc
+Added Room: Name=Osc
+Added Room: Name=TP1SCH
