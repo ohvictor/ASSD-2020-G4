@@ -1,5 +1,8 @@
 Circuit: * C:\Users\Abril\Documents\GitHub\ASSD-2020-G4\TP1 - Muestreo\SPICE FINAL\muestreo_natural.asc
 
+Error on line 9 : v5 n001 0 v = sin(2 
+	 Unknown parameter "v"
+V5: Missing value, assumed 0V @ DC
 Early termination of direct N-R iteration.
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
@@ -31,21 +34,21 @@ Source stepping succeeded in finding the operating point.
 Ignoring empty pin current: Ix(x1:ctrl)
 Ignoring empty pin current: Ix(x1:ctrl)
 
-Date: Tue Apr 07 17:33:35 2020
-Total elapsed time: 15.642 seconds.
+Date: Tue Apr 07 18:31:18 2020
+Total elapsed time: 12.682 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 70758
-traniter = 69072
-tranpoints = 33954
-accept = 27373
-rejected = 6581
-matrix size = 201
-fillins = 3719
+totiter = 34258
+traniter = 32555
+tranpoints = 16166
+accept = 12806
+rejected = 3360
+matrix size = 223
+fillins = 4399
 solver = Normal
-Thread vector: 47.7/19.5[4] 10.2/6.8[4] 26.5/13.4[4] 4.1/25.0[1]  2592/500
-Matrix Compiler1: 1.03 MB object code size  320.1/182.1/[83.4]
-Matrix Compiler2: 81.64 KB object code size  30.0/27.2/[11.1]
+Thread vector: 45.5/19.4[4] 11.7/5.6[4] 26.3/19.9[4] 4.2/6.7[1]  2592/500
+Matrix Compiler1: 1.31 MB object code size  412.4/255.4/[110.3]
+Matrix Compiler2: 95.73 KB object code size  51.8/43.0/[11.8]
 

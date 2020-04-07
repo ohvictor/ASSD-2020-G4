@@ -1,16 +1,17 @@
 * C:\Users\Abril\Documents\GitHub\ASSD-2020-G4\TP1 - Muestreo\SPICE FINAL\muestreo_natural.asc
 V1 vcc 0 15
 V2 -vcc 0 -15
-V3 N004 0 PULSE(0 5 1n 1n 1n 6.67u 13.34u)
-V4 N001 0 SINE(0 1 2k 0 0 90)
-XX1 N004 N002 N003 analog-switch
+V3 N005 0 PULSE(0 5 1n 1n 1n 6.67u 13.34u)
+XX1 N005 N002 N004 analog-switch
 XX2 N001 vcc -vcc N002 lprauch
 XX3 N003 vcc -vcc out lprauch
+XX4 N004 vcc -vcc N003 buffer
+V5 N001 0 V = sin(2 * pi * 2000 * time)/time
 
 * block symbol definitions
 .subckt analog-switch CTRL Vin Vout
 S1 Vin Vout CTRL 0 SW
-R2 Vout 0 1k
+R2 Vout 0 33k
 .model SW SW(Ron=240 Roff=10T Vt=1.75 Vh=1.05 )
 .ends analog-switch
 
@@ -20,6 +21,10 @@ XX2 N001 0 Vcc Vee N002 low-pass-rauch-block2
 XX3 N002 0 Vcc Vee N003 low-pass-rauch-block3
 XX4 N003 0 Vcc Vee Vout low-pass-rauch-block4
 .ends lprauch
+
+.subckt buffer Vin Vcc Vee Vout
+XU1 Vin Vout Vcc Vee Vout TL082
+.ends buffer
 
 .subckt low-pass-rauch-block1 Vin GND Vcc Vee Vout
 XU1 0 N002 Vcc Vee Vout TL082
@@ -57,7 +62,7 @@ C1 N001 0 7.10n
 C2 Vout N002 100p
 .ends low-pass-rauch-block4
 
-.tran 0 2m 0
+.tran 0 1.5m 0.1m
 .lib C:\Users\Abril\Documents\GitHub\ASSD-2020-G4\TP1 - Muestreo\Filtro LP\SPICE\TL082.301
 .backanno
 .end
