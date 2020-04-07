@@ -1,0 +1,83 @@
+Move Component(s) Origin to Grid
+Filename     : C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc
+Date         : 6/4/2020
+Time         : 19:40:09
+Time Elapsed : 00:00:00
+
+
+    Small Component Rfrec-PRESET (41.402mm,49.022mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component Rdc-PRESET (24.638mm,64.262mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R?-RES (19.812mm,55.88mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component D2-DIODO (46.482mm,54.102mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component D1-DIODO (36.322mm,54.102mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C?-CAP (43.942mm,42.672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C2-10n (15.494mm,51.308mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component COSC1-CAP (15.494mm,43.688mm) on Top Layer - Component pads are OFF grid. No action taken.
+    DIP Component UOsc-NE 555 (28.194mm,43.688mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component JS-Fuente (95.25mm,15.24mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component Jin-CON2 (3.81mm,16.51mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component CAS2-CAP (91.44mm,52.246mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component CAS1-CAP (76.2mm,65.983mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component CSH2-CAP (86.36mm,31.242mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component CSH1-CAP (73.66mm,31.242mm) on Top Layer - Component pads are OFF grid. No action taken.
+    DIP Component UAS-CD4066 (73.66mm,55.626mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component Ras-10k (83.82mm,52.246mm) on Top Layer - Component pads are OFF grid. No action taken.
+    DIP Component U1-LF398 (76.2mm,34.29mm) on Top Layer - Component pads are OFF grid. No action taken.
+    DIP Component U1_FR-TL084ACN (49.403mm,85.09mm) on Top Layer - Component pads are OFF grid. No action taken.
+    DIP Component U1_FAA-TL084ACN (49.657mm,15.24mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component TPSH-TP (78.74mm,48.26mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component TPFR-TP (32.512mm,69.85mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component TPFAA-TP (95.25mm,30.48mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component TPAS-TP (87.63mm,69.85mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component Rp-PRESET (66.04mm,36.83mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component Rf-RES (76.2mm,44.958mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R43_FR-RES (26.543mm,77.47mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R43_FAA-RES (72.517mm,22.86mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R42_FR-RES (26.543mm,80.01mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R42_FAA-RES (72.517mm,20.32mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R41_FR-RES (16.383mm,77.47mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R41_FAA-RES (82.677mm,22.86mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R33_FR-RES (26.543mm,92.71mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R33_FAA-RES (72.517mm,7.62mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R32_FR-RES (26.543mm,90.17mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R32_FAA-RES (72.517mm,10.16mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R31_FR-RES (16.383mm,92.71mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R31_FAA-RES (82.677mm,7.62mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R23_FR-RES (72.263mm,92.71mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R23_FAA-RES (26.797mm,7.62mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R22_FR-RES (72.263mm,90.17mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R22_FAA-RES (26.797mm,10.16mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R21_FR-RES (82.423mm,92.71mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R21_FAA-RES (16.637mm,7.62mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R13_FR-RES (72.263mm,77.47mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R13_FAA-RES (26.797mm,22.86mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R12_FR-RES (72.263mm,80.01mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R12_FAA-RES (26.797mm,20.32mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R11_FR-RES (82.423mm,77.47mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R11_FAA-RES (16.637mm,22.86mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component JSH-JUMPER (95.25mm,43.18mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component JFR-JUMPER (40.64mm,69.85mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component JFAA-JUMPER (92.71mm,26.67mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component JAS-JUMPER (93.726mm,67.31mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component Ch-CAP (83.82mm,44.958mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C42_FR-CAP (36.703mm,77.47mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C42_FAA-CAP (62.357mm,22.86mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C41_FR-CAP (16.383mm,80.01mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C41_FAA-CAP (82.677mm,20.32mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C32_FR-CAP (36.703mm,92.71mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C32_FAA-CAP (62.357mm,7.62mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C31_FR-CAP (16.383mm,90.17mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C31_FAA-CAP (82.677mm,10.16mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C22_FR-CAP (62.103mm,92.71mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C22_FAA-CAP (36.957mm,7.62mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C21_FR-CAP (82.423mm,90.17mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C21_FAA-CAP (16.637mm,10.16mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C12_FR-CAP (62.103mm,77.47mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C12_FAA-CAP (36.957mm,22.86mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C11_FR-CAP (82.423mm,80.01mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C11_FAA-CAP (16.637mm,20.32mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C2_FR-CAP (39.243mm,85.09mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C2_FAA-CAP (59.817mm,15.24mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C1_FR-CAP (59.563mm,85.09mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C1_FAA-CAP (39.497mm,15.24mm) on Top Layer - Component pads are OFF grid. No action taken.
+count : 75

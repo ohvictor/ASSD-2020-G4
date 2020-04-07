@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=+VCC Pin=COSC1-1
+Removed Pin From Net: NetName=GND Pin=COSC1-2
+Removed Pin From Net: NetName=GND Pin=UOsc-1
+Removed Pin From Net: NetName=CTRL Pin=UOsc-3
+Removed Pin From Net: NetName=+VCC Pin=UOsc-8
+Added Member To Class: ClassName=SH Member=Component Rf RES
+Change Room Name: Old Name=Osc New Name=TP1SCH
+Change Room Scope: Old Scope=InComponentClass('Osc') New Scope=InComponentClass('TP1SCH')

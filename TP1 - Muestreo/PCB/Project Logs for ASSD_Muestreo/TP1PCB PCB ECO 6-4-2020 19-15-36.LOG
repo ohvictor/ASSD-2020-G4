@@ -1,0 +1,54 @@
+Added Component: Designator=C2(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C?(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D1(DO41)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D2(DO41)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R?(RES400)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Rdc(PRESET H)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Rf(PRESET H)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=C2-2
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=+VCC Pin=R?-1
+Added Pin To Net: NetName=+VCC Pin=UOsc-4
+Added Pin To Net: NetName=Discharge Pin=R?-2
+Added Pin To Net: NetName=Discharge Pin=Rdc-2
+Added Pin To Net: NetName=Discharge Pin=Rdc-2
+Added Pin To Net: NetName=Discharge Pin=UOsc-7
+Added Net: Name=Discharge
+Added Pin To Net: NetName=NetC2_1 Pin=C2-1
+Added Pin To Net: NetName=NetC2_1 Pin=UOsc-5
+Added Net: Name=NetC2_1
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Pin To Net: NetName=NetC?_1 Pin=Rf-3
+Added Pin To Net: NetName=NetC?_1 Pin=Rf-3
+Added Net: Name=NetC?_1
+Added Pin To Net: NetName=NetD1_1 Pin=D1-1
+Added Pin To Net: NetName=NetD1_1 Pin=D2-2
+Added Pin To Net: NetName=NetD1_1 Pin=Rf-2
+Added Pin To Net: NetName=NetD1_1 Pin=Rf-2
+Added Net: Name=NetD1_1
+Added Pin To Net: NetName=NetD1_2 Pin=D1-2
+Added Pin To Net: NetName=NetD1_2 Pin=Rdc-1
+Added Pin To Net: NetName=NetD1_2 Pin=Rdc-1
+Added Net: Name=NetD1_2
+Added Pin To Net: NetName=NetD2_1 Pin=D2-1
+Added Pin To Net: NetName=NetD2_1 Pin=Rdc-3
+Added Pin To Net: NetName=NetD2_1 Pin=Rdc-3
+Added Net: Name=NetD2_1
+Added Pin To Net: NetName=Vc Pin=UOsc-2
+Added Pin To Net: NetName=Vc Pin=UOsc-6
+Added Net: Name=Vc
+Added Member To Class: ClassName=Osc Member=Component C2 10n
+Added Member To Class: ClassName=Osc Member=Component C? CAP
+Added Member To Class: ClassName=Osc Member=Component D1 DIODO
+Added Member To Class: ClassName=Osc Member=Component D2 DIODO
+Added Member To Class: ClassName=Osc Member=Component R? RES
+Added Member To Class: ClassName=Osc Member=Component Rdc PRESET
+Added Member To Class: ClassName=Osc Member=Component Rf PRESET
+Added Room: Name=TP1SCH

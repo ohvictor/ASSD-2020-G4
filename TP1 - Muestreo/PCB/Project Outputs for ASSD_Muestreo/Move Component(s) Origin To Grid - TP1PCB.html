@@ -1,0 +1,428 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 { 
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body { 
+			font-family : segoe ui;
+		}
+
+		td, th {  
+			padding: 0.5em;
+			text-align : left;
+		}
+		th { 
+			background-color : #EEEEEE;
+		
+		}
+		th.column1, td.column1 { 
+			width : 50%; 
+		}
+
+        th.column2, td.column2 {
+            width : 25%;
+        }
+
+		table { 
+			width : 100%; 
+            font-size: 0.9em;
+		}
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 5em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error { 
+			color : red;
+			font-weight : bold;
+		}	
+		tr.onmouseout_odd { 
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+			
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);		
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {	
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}	
+	</script><title>Move Component(s) Origin to Grid</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD18\Templates\AD_logo.png
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Move Component(s) Origin to Grid</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">6/4/2020</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">19:40:09</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc" class="file"><acronym title="C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc">C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc</acronym></a></td>
+</tr>
+</table><a name="IDSET0RBRU24DTIOQPGFWGBDMFOGJSMZBEBQKQYTDMS5144I20MWHM"><h2>Components Origin</h2></a><a name="ID4XBCI2DWZJU2FCQQJTOY1UZQ0FRA0PZ0DQY5Y3KJNKAVISHR0DUN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning"></th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3133.701mil|Location2.X=3423.913mil|Location1.Y=3363.563mil|Location2.Y=3845.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3133.701mil|Location2.X=3423.913mil|Location1.Y=3363.563mil|Location2.Y=3845.981mil|Absolute=True">Small Component Rfrec-PRESET (41.402mm,49.022mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2388.563mil|Location2.X=2771.437mil|Location1.Y=4048.701mil|Location2.Y=4360.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2388.563mil|Location2.X=2771.437mil|Location1.Y=4048.701mil|Location2.Y=4360.981mil|Absolute=True">Small Component Rdc-PRESET (24.638mm,64.262mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1946.63mil|Location2.X=2433.37mil|Location1.Y=3779mil|Location2.Y=3969.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1946.63mil|Location2.X=2433.37mil|Location1.Y=3779mil|Location2.Y=3969.981mil|Absolute=True">Small Component R?-RES (19.812mm,55.88mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3386mil|Location2.X=3505.968mil|Location1.Y=3511.63mil|Location2.Y=4097.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3386mil|Location2.X=3505.968mil|Location1.Y=3511.63mil|Location2.Y=4097.981mil|Absolute=True">Small Component D2-DIODO (46.482mm,54.102mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2986mil|Location2.X=3093.937mil|Location1.Y=3511.63mil|Location2.Y=4097.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2986mil|Location2.X=3093.937mil|Location1.Y=3511.63mil|Location2.Y=4097.981mil|Absolute=True">Small Component D1-DIODO (36.322mm,54.102mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3186.063mil|Location2.X=3493.937mil|Location1.Y=3151mil|Location2.Y=3358.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3186.063mil|Location2.X=3493.937mil|Location1.Y=3151mil|Location2.Y=3358.937mil|Absolute=True">Small Component C?-CAP (43.942mm,42.672mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2066mil|Location2.X=2373.937mil|Location1.Y=3591.063mil|Location2.Y=3798.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2066mil|Location2.X=2373.937mil|Location1.Y=3591.063mil|Location2.Y=3798.981mil|Absolute=True">Small Component C2-10n (15.494mm,51.308mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1766mil|Location2.X=2373.937mil|Location1.Y=3291.063mil|Location2.Y=3398.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1766mil|Location2.X=2373.937mil|Location1.Y=3291.063mil|Location2.Y=3398.937mil|Absolute=True">Small Component COSC1-CAP (15.494mm,43.688mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2376.63mil|Location2.X=2763.37mil|Location1.Y=3282.402mil|Location2.Y=3807.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2376.63mil|Location2.X=2763.37mil|Location1.Y=3282.402mil|Location2.Y=3807.981mil|Absolute=True">DIP Component UOsc-NE 555 (28.194mm,43.688mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5160mil|Location2.X=5413.937mil|Location1.Y=2071.063mil|Location2.Y=2378.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5160mil|Location2.X=5413.937mil|Location1.Y=2071.063mil|Location2.Y=2378.937mil|Absolute=True">Small Component JS-Fuente (95.25mm,15.24mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1706mil|Location2.X=1875.951mil|Location1.Y=2171.063mil|Location2.Y=2478.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1706mil|Location2.X=1875.951mil|Location1.Y=2171.063mil|Location2.Y=2478.981mil|Absolute=True">Small Component Jin-CON2 (3.81mm,16.51mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5056.063mil|Location2.X=5456.543mil|Location1.Y=3627.992mil|Location2.Y=3852.736mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5056.063mil|Location2.X=5456.543mil|Location1.Y=3627.992mil|Location2.Y=3852.736mil|Absolute=True">Small Component CAS2-CAP (91.44mm,52.246mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4456.063mil|Location2.X=5003.55mil|Location1.Y=4168.819mil|Location2.Y=4276.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4456.063mil|Location2.X=5003.55mil|Location1.Y=4168.819mil|Location2.Y=4276.693mil|Absolute=True">Small Component CAS1-CAP (76.2mm,65.983mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4856.063mil|Location2.X=5299.929mil|Location1.Y=2801.063mil|Location2.Y=3014.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4856.063mil|Location2.X=5299.929mil|Location1.Y=2801.063mil|Location2.Y=3014.981mil|Absolute=True">Small Component CSH2-CAP (86.36mm,31.242mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4120mil|Location2.X=4663.937mil|Location1.Y=2795mil|Location2.Y=2908.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4120mil|Location2.X=4663.937mil|Location1.Y=2795mil|Location2.Y=2908.937mil|Absolute=True">Small Component CSH1-CAP (73.66mm,31.242mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4435mil|Location2.X=5185mil|Location1.Y=3771.63mil|Location2.Y=4158.37mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4435mil|Location2.X=5185mil|Location1.Y=3771.63mil|Location2.Y=4158.37mil|Absolute=True">DIP Component UAS-CD4066 (73.66mm,55.626mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4466.63mil|Location2.X=4953.37mil|Location1.Y=3635.929mil|Location2.Y=3726.929mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4466.63mil|Location2.X=4953.37mil|Location1.Y=3635.929mil|Location2.Y=3726.929mil|Absolute=True">Small Component Ras-10k (83.82mm,52.246mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4547.402mil|Location2.X=4972.598mil|Location1.Y=2832mil|Location2.Y=3318.37mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4547.402mil|Location2.X=4972.598mil|Location1.Y=2832mil|Location2.Y=3318.37mil|Absolute=True">DIP Component U1-LF398 (76.2mm,34.29mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3361.63mil|Location2.X=3748.37mil|Location1.Y=4576.378mil|Location2.Y=5483.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3361.63mil|Location2.X=3748.37mil|Location1.Y=4576.378mil|Location2.Y=5483.981mil|Absolute=True">DIP Component U1_FR-TL084ACN (49.403mm,85.09mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3371.63mil|Location2.X=3758.37mil|Location1.Y=1826.378mil|Location2.Y=2733.481mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3371.63mil|Location2.X=3758.37mil|Location1.Y=1826.378mil|Location2.Y=2733.481mil|Absolute=True">DIP Component U1_FAA-TL084ACN (49.657mm,15.24mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4651.063mil|Location2.X=5019.929mil|Location1.Y=3466.063mil|Location2.Y=3583.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4651.063mil|Location2.X=5019.929mil|Location1.Y=3466.063mil|Location2.Y=3583.937mil|Absolute=True">Small Component TPSH-TP (78.74mm,48.26mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2709mil|Location2.X=2948.937mil|Location1.Y=4216mil|Location2.Y=4433.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2709mil|Location2.X=2948.937mil|Location1.Y=4216mil|Location2.Y=4433.937mil|Absolute=True">Small Component TPFR-TP (32.512mm,69.85mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5301.063mil|Location2.X=5729.909mil|Location1.Y=2766.063mil|Location2.Y=2883.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5301.063mil|Location2.X=5729.909mil|Location1.Y=2766.063mil|Location2.Y=2883.937mil|Absolute=True">Small Component TPFAA-TP (95.25mm,30.48mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4750mil|Location2.X=5118.937mil|Location1.Y=4316.063mil|Location2.Y=4433.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4750mil|Location2.X=5118.937mil|Location1.Y=4316.063mil|Location2.Y=4433.937mil|Absolute=True">Small Component TPAS-TP (87.63mm,69.85mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3964.065mil|Location2.X=4316.299mil|Location1.Y=2883.563mil|Location2.Y=3266.437mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3964.065mil|Location2.X=4316.299mil|Location1.Y=2883.563mil|Location2.Y=3266.437mil|Absolute=True">Small Component Rp-PRESET (66.04mm,36.83mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4166.63mil|Location2.X=4653.37mil|Location1.Y=3349mil|Location2.Y=3539.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4166.63mil|Location2.X=4653.37mil|Location1.Y=3349mil|Location2.Y=3539.981mil|Absolute=True">Small Component Rf-RES (76.2mm,44.958mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2384mil|Location2.X=2743.937mil|Location1.Y=4523.003mil|Location2.Y=4716.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2384mil|Location2.X=2743.937mil|Location1.Y=4523.003mil|Location2.Y=4716.937mil|Absolute=True">SMT Small Component R43_FR-RES (26.543mm,77.47mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4376mil|Location2.X=4795.871mil|Location1.Y=2483.063mil|Location2.Y=2676.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4376mil|Location2.X=4795.871mil|Location1.Y=2483.063mil|Location2.Y=2676.981mil|Absolute=True">SMT Small Component R43_FAA-RES (72.517mm,22.86mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2475mil|Location2.X=2834.89mil|Location1.Y=4733.063mil|Location2.Y=4926.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2475mil|Location2.X=2834.89mil|Location1.Y=4733.063mil|Location2.Y=4926.981mil|Absolute=True">SMT Small Component R42_FR-RES (26.543mm,80.01mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3936mil|Location2.X=4553.937mil|Location1.Y=2380.003mil|Location2.Y=2469.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3936mil|Location2.X=4553.937mil|Location1.Y=2380.003mil|Location2.Y=2469.981mil|Absolute=True">SMT Small Component R42_FAA-RES (72.517mm,20.32mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1796mil|Location2.X=2343.937mil|Location1.Y=4630.003mil|Location2.Y=4719.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1796mil|Location2.X=2343.937mil|Location1.Y=4630.003mil|Location2.Y=4719.981mil|Absolute=True">SMT Small Component R41_FR-RES (16.383mm,77.47mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4776.063mil|Location2.X=5383.874mil|Location1.Y=2480.003mil|Location2.Y=2569.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4776.063mil|Location2.X=5383.874mil|Location1.Y=2480.003mil|Location2.Y=2569.981mil|Absolute=True">SMT Small Component R41_FAA-RES (82.677mm,22.86mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2384mil|Location2.X=2743.937mil|Location1.Y=5233.063mil|Location2.Y=5426.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2384mil|Location2.X=2743.937mil|Location1.Y=5233.063mil|Location2.Y=5426.981mil|Absolute=True">SMT Small Component R33_FR-RES (26.543mm,92.71mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4376mil|Location2.X=4795.871mil|Location1.Y=1773.003mil|Location2.Y=1966.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4376mil|Location2.X=4795.871mil|Location1.Y=1773.003mil|Location2.Y=1966.937mil|Absolute=True">SMT Small Component R33_FAA-RES (72.517mm,7.62mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2475mil|Location2.X=2834.89mil|Location1.Y=5023.003mil|Location2.Y=5216.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2475mil|Location2.X=2834.89mil|Location1.Y=5023.003mil|Location2.Y=5216.937mil|Absolute=True">SMT Small Component R32_FR-RES (26.543mm,90.17mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3936mil|Location2.X=4553.937mil|Location1.Y=1980.003mil|Location2.Y=2069.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3936mil|Location2.X=4553.937mil|Location1.Y=1980.003mil|Location2.Y=2069.981mil|Absolute=True">SMT Small Component R32_FAA-RES (72.517mm,10.16mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1796mil|Location2.X=2343.937mil|Location1.Y=5230.003mil|Location2.Y=5319.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1796mil|Location2.X=2343.937mil|Location1.Y=5230.003mil|Location2.Y=5319.981mil|Absolute=True">SMT Small Component R31_FR-RES (16.383mm,92.71mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4776.063mil|Location2.X=5383.874mil|Location1.Y=1880.003mil|Location2.Y=1969.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4776.063mil|Location2.X=5383.874mil|Location1.Y=1880.003mil|Location2.Y=1969.981mil|Absolute=True">SMT Small Component R31_FAA-RES (82.677mm,7.62mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4366mil|Location2.X=4725.89mil|Location1.Y=5233.063mil|Location2.Y=5426.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4366mil|Location2.X=4725.89mil|Location1.Y=5233.063mil|Location2.Y=5426.981mil|Absolute=True">SMT Small Component R23_FR-RES (72.263mm,92.71mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2334mil|Location2.X=2753.937mil|Location1.Y=1773.003mil|Location2.Y=1966.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2334mil|Location2.X=2753.937mil|Location1.Y=1773.003mil|Location2.Y=1966.937mil|Absolute=True">SMT Small Component R23_FAA-RES (26.797mm,7.62mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4275mil|Location2.X=4634.89mil|Location1.Y=5023.003mil|Location2.Y=5216.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4275mil|Location2.X=4634.89mil|Location1.Y=5023.003mil|Location2.Y=5216.937mil|Absolute=True">SMT Small Component R22_FR-RES (72.263mm,90.17mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2576.063mil|Location2.X=3193.871mil|Location1.Y=1980.003mil|Location2.Y=2069.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2576.063mil|Location2.X=3193.871mil|Location1.Y=1980.003mil|Location2.Y=2069.981mil|Absolute=True">SMT Small Component R22_FAA-RES (26.797mm,10.16mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4766.063mil|Location2.X=5313.893mil|Location1.Y=5230.003mil|Location2.Y=5319.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4766.063mil|Location2.X=5313.893mil|Location1.Y=5230.003mil|Location2.Y=5319.981mil|Absolute=True">SMT Small Component R21_FR-RES (82.423mm,92.71mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1746mil|Location2.X=2353.937mil|Location1.Y=1880.003mil|Location2.Y=1969.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1746mil|Location2.X=2353.937mil|Location1.Y=1880.003mil|Location2.Y=1969.981mil|Absolute=True">SMT Small Component R21_FAA-RES (16.637mm,7.62mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4366mil|Location2.X=4715.893mil|Location1.Y=4523.003mil|Location2.Y=4716.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4366mil|Location2.X=4715.893mil|Location1.Y=4523.003mil|Location2.Y=4716.937mil|Absolute=True">SMT Small Component R13_FR-RES (72.263mm,77.47mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2344mil|Location2.X=2753.937mil|Location1.Y=2483.063mil|Location2.Y=2676.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2344mil|Location2.X=2753.937mil|Location1.Y=2483.063mil|Location2.Y=2676.981mil|Absolute=True">SMT Small Component R13_FAA-RES (26.797mm,22.86mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4280mil|Location2.X=4629.893mil|Location1.Y=4733.063mil|Location2.Y=4926.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4280mil|Location2.X=4629.893mil|Location1.Y=4733.063mil|Location2.Y=4926.981mil|Absolute=True">SMT Small Component R12_FR-RES (72.263mm,80.01mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2576.063mil|Location2.X=3183.874mil|Location1.Y=2380.003mil|Location2.Y=2469.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2576.063mil|Location2.X=3183.874mil|Location1.Y=2380.003mil|Location2.Y=2469.981mil|Absolute=True">SMT Small Component R12_FAA-RES (26.797mm,20.32mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4766.063mil|Location2.X=5303.896mil|Location1.Y=4630.003mil|Location2.Y=4719.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4766.063mil|Location2.X=5303.896mil|Location1.Y=4630.003mil|Location2.Y=4719.981mil|Absolute=True">SMT Small Component R11_FR-RES (82.423mm,77.47mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1756mil|Location2.X=2353.937mil|Location1.Y=2480.003mil|Location2.Y=2569.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1756mil|Location2.X=2353.937mil|Location1.Y=2480.003mil|Location2.Y=2569.981mil|Absolute=True">SMT Small Component R11_FAA-RES (16.637mm,22.86mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5306.063mil|Location2.X=5599.948mil|Location1.Y=3171.063mil|Location2.Y=3478.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5306.063mil|Location2.X=5599.948mil|Location1.Y=3171.063mil|Location2.Y=3478.937mil|Absolute=True">Small Component JSH-JUMPER (95.25mm,43.18mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3056.063mil|Location2.X=3363.948mil|Location1.Y=4221mil|Location2.Y=4428.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3056.063mil|Location2.X=3363.948mil|Location1.Y=4221mil|Location2.Y=4428.937mil|Absolute=True">Small Component JFR-JUMPER (40.64mm,69.85mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4860mil|Location2.X=5413.937mil|Location1.Y=2621.063mil|Location2.Y=2728.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4860mil|Location2.X=5413.937mil|Location1.Y=2621.063mil|Location2.Y=2728.937mil|Absolute=True">Small Component JFAA-JUMPER (92.71mm,26.67mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5060mil|Location2.X=5353.937mil|Location1.Y=4121.063mil|Location2.Y=4464.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5060mil|Location2.X=5353.937mil|Location1.Y=4121.063mil|Location2.Y=4464.981mil|Absolute=True">Small Component JAS-JUMPER (93.726mm,67.31mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4756.063mil|Location2.X=5203.968mil|Location1.Y=3341.063mil|Location2.Y=3448.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4756.063mil|Location2.X=5203.968mil|Location1.Y=3341.063mil|Location2.Y=3448.937mil|Absolute=True">Small Component Ch-CAP (83.82mm,44.958mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2875mil|Location2.X=3234.89mil|Location1.Y=4523.003mil|Location2.Y=4716.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2875mil|Location2.X=3234.89mil|Location1.Y=4523.003mil|Location2.Y=4716.937mil|Absolute=True">SMT Small Component C42_FR-CAP (36.703mm,77.47mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3855mil|Location2.X=4274.871mil|Location1.Y=2483.063mil|Location2.Y=2676.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3855mil|Location2.X=4274.871mil|Location1.Y=2483.063mil|Location2.Y=2676.981mil|Absolute=True">SMT Small Component C42_FAA-CAP (62.357mm,22.86mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1796mil|Location2.X=2343.937mil|Location1.Y=4730.003mil|Location2.Y=4819.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1796mil|Location2.X=2343.937mil|Location1.Y=4730.003mil|Location2.Y=4819.981mil|Absolute=True">SMT Small Component C41_FR-CAP (16.383mm,80.01mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4776.063mil|Location2.X=5383.874mil|Location1.Y=2380.003mil|Location2.Y=2469.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4776.063mil|Location2.X=5383.874mil|Location1.Y=2380.003mil|Location2.Y=2469.981mil|Absolute=True">SMT Small Component C41_FAA-CAP (82.677mm,20.32mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2875mil|Location2.X=3234.89mil|Location1.Y=5233.063mil|Location2.Y=5426.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2875mil|Location2.X=3234.89mil|Location1.Y=5233.063mil|Location2.Y=5426.981mil|Absolute=True">SMT Small Component C32_FR-CAP (36.703mm,92.71mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3855mil|Location2.X=4274.871mil|Location1.Y=1773.003mil|Location2.Y=1966.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3855mil|Location2.X=4274.871mil|Location1.Y=1773.003mil|Location2.Y=1966.937mil|Absolute=True">SMT Small Component C32_FAA-CAP (62.357mm,7.62mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1796mil|Location2.X=2343.937mil|Location1.Y=5130.003mil|Location2.Y=5219.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1796mil|Location2.X=2343.937mil|Location1.Y=5130.003mil|Location2.Y=5219.981mil|Absolute=True">SMT Small Component C31_FR-CAP (16.383mm,90.17mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4776.063mil|Location2.X=5383.874mil|Location1.Y=1980.003mil|Location2.Y=2069.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4776.063mil|Location2.X=5383.874mil|Location1.Y=1980.003mil|Location2.Y=2069.981mil|Absolute=True">SMT Small Component C31_FAA-CAP (82.677mm,10.16mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3875mil|Location2.X=4234.89mil|Location1.Y=5233.063mil|Location2.Y=5426.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3875mil|Location2.X=4234.89mil|Location1.Y=5233.063mil|Location2.Y=5426.981mil|Absolute=True">SMT Small Component C22_FR-CAP (62.103mm,92.71mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2855mil|Location2.X=3274.871mil|Location1.Y=1773.003mil|Location2.Y=1966.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2855mil|Location2.X=3274.871mil|Location1.Y=1773.003mil|Location2.Y=1966.937mil|Absolute=True">SMT Small Component C22_FAA-CAP (36.957mm,7.62mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4766.063mil|Location2.X=5313.893mil|Location1.Y=5130.003mil|Location2.Y=5219.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4766.063mil|Location2.X=5313.893mil|Location1.Y=5130.003mil|Location2.Y=5219.981mil|Absolute=True">SMT Small Component C21_FR-CAP (82.423mm,90.17mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1746mil|Location2.X=2353.937mil|Location1.Y=1980.003mil|Location2.Y=2069.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1746mil|Location2.X=2353.937mil|Location1.Y=1980.003mil|Location2.Y=2069.981mil|Absolute=True">SMT Small Component C21_FAA-CAP (16.637mm,10.16mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3880mil|Location2.X=4229.893mil|Location1.Y=4523.003mil|Location2.Y=4716.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3880mil|Location2.X=4229.893mil|Location1.Y=4523.003mil|Location2.Y=4716.937mil|Absolute=True">SMT Small Component C12_FR-CAP (62.103mm,77.47mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2860mil|Location2.X=3269.874mil|Location1.Y=2483.063mil|Location2.Y=2676.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2860mil|Location2.X=3269.874mil|Location1.Y=2483.063mil|Location2.Y=2676.981mil|Absolute=True">SMT Small Component C12_FAA-CAP (36.957mm,22.86mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4766.063mil|Location2.X=5303.896mil|Location1.Y=4730.003mil|Location2.Y=4819.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4766.063mil|Location2.X=5303.896mil|Location1.Y=4730.003mil|Location2.Y=4819.981mil|Absolute=True">SMT Small Component C11_FR-CAP (82.423mm,80.01mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1756mil|Location2.X=2353.937mil|Location1.Y=2380.003mil|Location2.Y=2469.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1756mil|Location2.X=2353.937mil|Location1.Y=2380.003mil|Location2.Y=2469.981mil|Absolute=True">SMT Small Component C11_FAA-CAP (16.637mm,20.32mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2681mil|Location2.X=3308.937mil|Location1.Y=4921.063mil|Location2.Y=5028.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2681mil|Location2.X=3308.937mil|Location1.Y=4921.063mil|Location2.Y=5028.937mil|Absolute=True">Small Component C2_FR-CAP (39.243mm,85.09mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3811.063mil|Location2.X=4498.89mil|Location1.Y=2171.063mil|Location2.Y=2278.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3811.063mil|Location2.X=4498.89mil|Location1.Y=2171.063mil|Location2.Y=2278.937mil|Absolute=True">Small Component C2_FAA-CAP (59.817mm,15.24mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3801.063mil|Location2.X=4418.913mil|Location1.Y=4921.063mil|Location2.Y=5028.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3801.063mil|Location2.X=4418.913mil|Location1.Y=4921.063mil|Location2.Y=5028.937mil|Absolute=True">Small Component C1_FR-CAP (59.563mm,85.09mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2641mil|Location2.X=3318.937mil|Location1.Y=2171.063mil|Location2.Y=2278.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\PCB\TP1PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2641mil|Location2.X=3318.937mil|Location1.Y=2171.063mil|Location2.Y=2278.937mil|Absolute=True">Small Component C1_FAA-CAP (39.497mm,15.24mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
