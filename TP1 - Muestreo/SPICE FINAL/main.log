@@ -1,0 +1,94 @@
+Circuit: * C:\Users\Abril\Documents\GitHub\ASSD-2020-G4\TP1 - Muestreo\SPICE FINAL\main.asc
+
+WARNING: Specified period is not longer than the sum of Trise, Tfall, and Ton for v4.  Increasing period to 2.6682e-005
+ERROR: Node NC_02 is floating and connected to current source G:S_H:U1:IB
+
+Early termination of direct N-R iteration.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+Gmin = 5.5165
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+vernier = 0.0078125
+Gmin = 5.49501
+vernier = 0.00390625
+vernier = 0.00195313
+vernier = 0.000976563
+vernier = 0.000488281
+Gmin = 5.50104
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 12.7367%
+Source Step = 13.2102%
+vernier = 0.00390625
+Source Step = 13.1984%
+Source Step = 13.228%
+Source Step = 13.2576%
+Source Step = 13.2872%
+Source Step = 13.3168%
+Source Step = 13.3464%
+Source Step = 13.3759%
+Source Step = 13.4055%
+Source Step = 13.4351%
+Source Step = 13.4647%
+Source Step = 13.4943%
+Source Step = 13.5239%
+vernier = 0.00146484
+Starting source stepping with srcstepmethod=1
+Source Step = 3.0303%
+Source stepping failed
+
+Pseudo transient terminated at 103.135 s, solution accepted ready or not!
+Ignoring empty pin current: Ix(u1:3)
+Ignoring empty pin current: Ix(u1:8)
+Ignoring empty pin current: Ix(u1:7)
+Ignoring empty pin current: Ix(u1:4)
+Ignoring empty pin current: Ix(u1:6)
+Ignoring empty pin current: Ix(u1:5)
+Ignoring empty pin current: Ix(u1:1)
+Ignoring empty pin current: Ix(s_h:ctrl)
+Ignoring empty pin current: Ix(s_h:in)
+Ignoring empty pin current: Ix(s_h:out)
+Ignoring empty pin current: Ix(s_h:vcc)
+Ignoring empty pin current: Ix(s_h:vee)
+Ignoring empty pin current: Ix(a_s:ctrl)
+Ignoring empty pin current: Ix(u1:3)
+Ignoring empty pin current: Ix(u1:8)
+Ignoring empty pin current: Ix(u1:7)
+Ignoring empty pin current: Ix(u1:4)
+Ignoring empty pin current: Ix(u1:6)
+Ignoring empty pin current: Ix(u1:5)
+Ignoring empty pin current: Ix(u1:1)
+Ignoring empty pin current: Ix(s_h:ctrl)
+Ignoring empty pin current: Ix(s_h:in)
+Ignoring empty pin current: Ix(s_h:out)
+Ignoring empty pin current: Ix(s_h:vcc)
+Ignoring empty pin current: Ix(s_h:vee)
+Ignoring empty pin current: Ix(a_s:ctrl)
+
+Date: Tue Apr 07 16:58:31 2020
+Total elapsed time: 37.471 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 10034
+traniter = 2638
+tranpoints = 1287
+accept = 1214
+rejected = 79
+matrix size = 242
+fillins = 3769
+solver = Normal
+Thread vector: 69.2/37.2[4] 11.0/6.0[4] 18.9/5.3[4] 4.6/9.9[1]  2592/500
+Matrix Compiler1: 1.01 MB object code size  327.9/187.7/[79.5]
+Matrix Compiler2: 85.92 KB object code size  28.2/21.2/[13.3]
+
