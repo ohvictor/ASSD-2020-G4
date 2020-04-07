@@ -6,10 +6,10 @@ from matplotlib.backends._backend_tk import NavigationToolbar2Tk
 from matplotlib.figure import Figure
 import matplotlib.pylab as plt
 #otros
-from signal import Signal
-from generator import Generator
-from filter import Filter
-from block import Block
+from TP1.Python.signal  import Signal
+from TP1.Python.generator import Generator
+from TP1.Python.filter import Filter
+from TP1.Python.block import Block
 
 class Gui:
     def __init__(self): #constructor.

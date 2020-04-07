@@ -1,7 +1,7 @@
 import numpy as num
 import math
-from signal import Signal
-from spectrum import Spectrum
+from TP1.Python.signal import Signal
+from TP1.Python.spectrum import Spectrum
 import matplotlib.pylab as plt
 
 class Generator:
@@ -84,7 +84,7 @@ class Generator:
                 temp = temp + 1
             if (x_t[i] - temp/freq) >= DC/(100*freq):
                 y_t.append(0)
-            else:    
+            else:
                 y_t.append(Vmax)
         S.setTimeData(x_t, y_t)
         S = spect.FT(S, pts)
@@ -131,13 +131,13 @@ def main():
     #S0 = gen.gen_sin(1, 2, 4/2, 10000)
     #S1 = gen.gen_3_2sin(1, 4, 4/4, 10000)
     #S2 = gen.gen_square(5, 3.25, 50, 4/2, 10000)
-    S3 = gen.gen_sinc(2, 1, 1/1, 10000)
-    #S4 = gen.gen_AM(2, 1, 5*1/1, 10000)
+    #S3 = gen.gen_sinc(2, 1, 1/1, 10000)
+    S4 = gen.gen_AM(2, 1, 5*1/1, 10000)
     #plt.plot(S0.getTimeData()[0], S0.getTimeData()[1])
     #plt.plot(S1.getTimeData()[0], S1.getTimeData()[1])
     #plt.plot(S2.getTimeData()[0], S2.getTimeData()[1])
-    plt.plot(S3.getTimeData()[0], S3.getTimeData()[1])
-    #plt.plot(S4.getTimeData()[0], S4.getTimeData()[1])
+    #plt.plot(S3.getTimeData()[0], S3.getTimeData()[1])
+    plt.plot(S4.getTimeData()[0], S4.getTimeData()[1])
     plt.grid(True)
     plt.show()
 

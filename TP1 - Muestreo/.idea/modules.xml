@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../TC/TP4/Frontend/FilterDesigner/.idea/FilterDesigner.iml" filepath="$PROJECT_DIR$/../../TC/TP4/Frontend/FilterDesigner/.idea/FilterDesigner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/TP1 - Muestreo.iml" filepath="$PROJECT_DIR$/.idea/TP1 - Muestreo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../TpsViejos/.idea/TpsViejos.iml" filepath="$PROJECT_DIR$/../TpsViejos/.idea/TpsViejos.iml" />
+    </modules>
+  </component>
+</project>
