@@ -10,8 +10,7 @@ class Component():
         return signal
 
 
-
-    def R_fitler(self, signal_in, clock):
+    def Sample_and_Hold(self, signal_in, clock):
         signal = Signal()
         spectrum = Spectrum()
 
@@ -37,8 +36,8 @@ class Component():
         spectrum = Spectrum()
 
         y = []
-        x1, y1 = signal_in.getTimeData()
-        x2, y2 = clock.getTimeData()
+        x1, y1 = signal_in.get_time_data()
+        x2, y2 = clock.get_time_data()
 
         for i in range(len(x1)):
             if y2[i] > 0:
@@ -46,14 +45,14 @@ class Component():
             else:
                 y.append(0)
 
-        Signal.set_time_data(x1, y)
-        S = spectrum.Fourier_transform(signal)
+        signal.set_time_data(x1, y)
+        signal = spectrum.Fourier_transform(signal)
         return signal
 
 
-    def Sample_and_hold(self, signal_in, filter):
+    def R_F(self, signal_in, filter):
         signal = Signal()
-        signal = filter.LP(signal_in)
+        signal = filter.Low_pass(signal_in)
         return signal
 
 

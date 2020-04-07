@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 class Filters():
-    def __init__(self, fa):
-        self.fa = fa
+    def __init__(self):
+        self.fa = 0
 
     def set_frequency(self, fa):
         self.fa = fa
@@ -26,5 +26,5 @@ class Filters():
         signal.set_originial_frequency_data(x_1, y)
 
         signal = spectrum.Original_Fourier_transform(signal, length)
-        signal = spectrum.Inverse_Fourier_transform(signal, original_signal.get_time_data[0][-1], len(original_signal.get_time_data()[0]))
+        signal = spectrum.Inverse_Fourier_transform(signal, original_signal.get_time_data()[0][-1], len(original_signal.get_time_data()[0]))
         return signal
