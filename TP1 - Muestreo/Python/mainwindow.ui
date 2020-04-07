@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1125</width>
-    <height>643</height>
+    <width>1327</width>
+    <height>743</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -460,18 +460,18 @@ font: 75 20pt &quot;Arial&quot;;</string>
      <rect>
       <x>260</x>
       <y>250</y>
-      <width>421</width>
-      <height>331</height>
+      <width>580</width>
+      <height>450</height>
      </rect>
     </property>
    </widget>
    <widget class="MplWidget" name="frequency_domain" native="true">
     <property name="geometry">
      <rect>
-      <x>690</x>
+      <x>790</x>
       <y>250</y>
-      <width>421</width>
-      <height>331</height>
+      <width>580</width>
+      <height>450</height>
      </rect>
     </property>
    </widget>
@@ -480,8 +480,8 @@ font: 75 20pt &quot;Arial&quot;;</string>
      <rect>
       <x>10</x>
       <y>240</y>
-      <width>231</width>
-      <height>341</height>
+      <width>241</width>
+      <height>451</height>
      </rect>
     </property>
     <property name="title">
@@ -751,7 +751,7 @@ font: 75 20pt &quot;Arial&quot;;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1125</width>
+     <width>1327</width>
      <height>26</height>
     </rect>
    </property>

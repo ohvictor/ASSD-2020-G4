@@ -39,12 +39,12 @@ class MainWindow(QtWidgets.QMainWindow):
         ##Aca van los callbacks
 
         self.ui.pushButton_configure.clicked.connect(self.update_signals)
-       # self.ui.pushButton_1.clicked.connect(lambda: self.update_grafico('prueba'))
-        #self.ui.pushButton_2.clicked.connect()
-        #self.ui.pushButton_3.clicked.connect()
-        #self.ui.pushButton_4.clicked.connect()
-        #self.ui.pushButton_5.clicked.connect()
-        #self.ui.pushButton_6.clicked.connect()
+        self.ui.pushButton_1.clicked.connect(lambda: self.update(0))
+        self.ui.pushButton_2.clicked.connect(lambda: self.update(1))
+        self.ui.pushButton_3.clicked.connect(lambda: self.update(2))
+        self.ui.pushButton_4.clicked.connect(lambda: self.update(3))
+        self.ui.pushButton_5.clicked.connect(lambda: self.update(4))
+        self.ui.pushButton_6.clicked.connect(lambda: self.update(5))
 
         #########################
 
@@ -183,10 +183,12 @@ class MainWindow(QtWidgets.QMainWindow):
         if freq_filter <= 0:
             self.show_pop_up('The filter frequency you entered is non-positive!')
 
-    def update_grafico(self, signal):
+    def update(self, key):
 
-        self.ui.time_domain.plot(signal, 'time')
-        self.ui.frequency_domain(signal, 'frequency')
+        self.checkboxes()
+
+        self.ui.time_domain.plot(self.signals[0], self.signals[key], 'time')
+        self.ui.frequency_domain.plot(self.signals[0], self.signals[key], 'frequency')
 
     def show_pop_up(self, error):
         msg = QMessageBox()

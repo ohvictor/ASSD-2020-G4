@@ -37,15 +37,21 @@ class MplWidget(QWidget):
         self.canvas.axes.set_facecolor("#e1ddbf")
         self.setLayout(layout)
 
-    def plot(self, signal, key):
+    def plot(self, initial_signal, signal, key):
         self.canvas.axes.clear()
         if key == 'time':
+            self.canvas.axes.set_title('Time Domain')
+            self.canvas.axes.set_xlabel('Time (ms)')
+            self.canvas.axes.set_ylabel('Amplitude (V)')
             self.canvas.axes.plot(signal.get_time_data()[0], signal.get_time_data()[1])
-            self.canvas.axes.legend()
             self.canvas.draw()
         else:
+            self.canvas.axes.set_title('Frequency Domain')
+            self.canvas.axes.set_xlabel('Frequency (kHz)')
+            self.canvas.axes.set_ylabel('Amplitude (V)')
+            self.canvas.axes.set_xlim(0, 50 * initial_signal.freq)
+
             self.canvas.axes.plot(signal.get_frequency_data()[0], signal.get_frequency_data()[1])
-            self.canvas.axes.legend()
             self.canvas.draw()
 
 
