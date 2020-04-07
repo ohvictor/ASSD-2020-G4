@@ -1,0 +1,11 @@
+* C:\Users\Abril\Documents\GitHub\ASSD-2020-G4\TP1 - Muestreo\SH\sh.asc
+XU1 IN 0 V4 -vcc N001 OUT +vcc LF398H
+C1 N001 0 100p
+V1 +vcc 0 +15
+V2 -vcc 0 -15
+V3 IN 0 SINE(0 5 5k 0 0 0 1000)
+V4 V4 0 PULSE(0 5 1m 0.1n 0.1n 20u 40u)
+.tran 0 3m 0 1
+.include LF398.sub
+.backanno
+.end
