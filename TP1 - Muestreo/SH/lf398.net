@@ -1,0 +1,12 @@
+* C:\Users\Abril\Documents\GitHub\ASSD-2020-G4\TP1 - Muestreo\SH\lf398.asc
+C1 N003 0 10n
+R1 Out 0 10K
+Vl N002 0 PULSE(0 2 0.01 1n 1n 0.1 0.2) Rser=100 Cpar=100p
+V+ V+ 0 16 Rser=0.1 Cpar=100p
+V- V- 0 -16 Rser=0.1 Cpar=100p
+Vin N001 0 SINE(0 10 1 0) Rser=100 Cpar=100p
+XU1 N001 N002 0 V- N003 Out V+ LF398H
+.tran 0 3 0 100u startup
+.include LF398.sub
+.backanno
+.end

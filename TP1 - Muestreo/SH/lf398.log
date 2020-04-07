@@ -1,21 +1,21 @@
-Circuit: * C:\Users\ohvic\Documents\ITBA\ASSD-2020-G4\TP1 - Muestreo\SH\lf398.asc
+Circuit: * C:\Users\Abril\Documents\GitHub\ASSD-2020-G4\TP1 - Muestreo\SH\lf398.asc
 
 Direct Newton iteration for .op point succeeded.
 
-Date: Sun Apr  5 17:04:20 2020
-Total elapsed time: 1.510 seconds.
+Date: Tue Apr 07 15:00:07 2020
+Total elapsed time: 0.952 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 60261
-traniter = 60224
-tranpoints = 30069
-accept = 30052
-rejected = 17
+totiter = 68457
+traniter = 68420
+tranpoints = 32926
+accept = 32473
+rejected = 453
 matrix size = 41
 fillins = 62
 solver = Normal
-Matrix Compiler1: 6.21 KB object code size  1.0/0.9/[0.8]
-Matrix Compiler2: off  [0.4]/1.6/1.0
+Matrix Compiler1: 6.21 KB object code size  1.1/1.1/[0.5]
+Matrix Compiler2: 4.52 KB object code size  0.6/1.1/[0.6]
 
