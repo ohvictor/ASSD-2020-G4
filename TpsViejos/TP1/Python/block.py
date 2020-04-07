@@ -1,6 +1,6 @@
 import math
-from signal import Signal
-from spectrum import Spectrum
+from TP1.Python.signal import Signal
+from TP1.Python.spectrum import Spectrum
 from filter import Filter
 import matplotlib.pylab as plt
 
