@@ -1,0 +1,146 @@
+%\documentclass{article}    %comento la linea porque ya esta definido
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{titlesec, blindtext, color}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+
+\geometry{
+     a4paper,
+     left=19mm,
+     right=19mm,
+     top=19mm,
+     bottom=25mm,
+     }
+     
+\usepackage{sectsty}
+\allsectionsfont{\normalfont \scshape}
+
+
+\usepackage{subfiles}						%MULTIARCHIVOS, NO BORRAR
+\usepackage{nomencl}					%Para introducir nomenclaturas/definciones
+\usepackage{makecell}					%Para emprolijar celdas de tablas
+\usepackage{amsmath}
+\usepackage{amssymb}					%simbolos matematicos
+\usepackage{upgreek}					%puedo usar \uptau que es como \tau pero con mas rulito
+\usepackage{steinmetz}
+\usepackage{mathtools}
+\usepackage{placeins}
+\setlength{\columnsep}{0.6cm}
+%\usepackage[left =2cm, right=2cm, top=1.5cm, bottom=2cm]{geometry}	%texto ocupa mas ancho de pagina
+\usepackage{xcolor}						%se usa en \code
+\usepackage[american]{circuitikz}		%dibujar esquematicos y diagramas
+\usepackage[parfill]{parskip}			%pone espacio entre parrafos
+\setlength{\parindent}{10pt}			%cuanta sangria al principio de un parrafo
+\usepackage{indentfirst}				%pone sangria al primer parrafo de una seccion
+\usepackage{gensymb}
+\usepackage{textcomp}
+\usepackage[hidelinks]{hyperref}
+\usepackage{pdfpages}
+\usepackage{csvsimple}
+\usepackage{adjustbox}
+\usepackage{units}
+\usepackage{listings}
+\usepackage{stfloats}
+\usepackage{longtable}
+\usepackage{pgffor}
+\usepackage{wrapfig}
+%TODOs
+\usepackage[colorinlistoftodos]{todonotes}
+
+%
+\usepackage{subcaption}
+
+%Para hacer plots directamente desde latex
+\usepackage{pgfplots}
+
+\usepackage[all]{xy}
+
+\pgfplotsset{compat=1.15} %si no esta los labels de los graficos quedan chuecos
+
+\setlength{\marginparwidth}{2cm}		%dar lugar a las todo notes en modo twocolumn
+
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\DeclarePairedDelimiter\abs{\lvert}{\rvert} %
+\makeatletter	%magia de categoria de caracteres en Tex, ignorar
+\let\oldabs\abs 
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother	%magia de categoria de caracteres en Tex, ignorar
+
+%Definicion comando \parsum: hace re piola el simbolo de la suma en paralelo
+\newcommand{\parsum}{\mathbin{\!/\mkern-5mu/\!}} 
+
+%Definicion comando \code: poen el texto en fuente monoespaciada con fondo gris 
+%al estilo del codigo de stack overflow
+\definecolor{light-gray}{gray}{0.95} 
+\newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
+
+
+
+%Path que usan los subfiles para buscar los archivos que se incluyen en los plots de pgfplots.
+%Si se compila desde el main, se redefine. Si se compila desde un subfile, no se redefine.
+%Es alto parche
+\newcommand{\subfilepath}[0]{}
+
+% separacion correcta de palabras en silabas
+\hyphenation{o-pe-ra-cio-nal}
+\hyphenation{o-pe-ra-cio-na-les}
+\hyphenation{si-guien-tes}
+\hyphenation{e-mu-lan-do}
+\hyphenation{co-rrien-te}
+\hyphenation{ob-te-ner}
+\hyphenation{ob-te-ne-mos}
+\hyphenation{ha-llar-se}
+\hyphenation{ca-pa-ci-tor}
+\hyphenation{trans-fe-ren-cia}
+\hyphenation{ma-ne-ra}
+\hyphenation{di-se-ño}
+\hyphenation{re-so-nan-cia}
+\hyphenation{mo-de-lar-se}
+\hyphenation{a-pro-xi-ma-da-men-te}
+\hyphenation{pseu-do-pe-rí-o-do}
+\hyphenation{res-pues-ta}
+\hyphenation{li-neal}
+\hyphenation{sa-tu-ra-ción}
+\hyphenation{e-le-va-da}
+\hyphenation{si-guien-te}
+\hyphenation{cons-tan-te}
+\hyphenation{es-pe-ra-do}
+\hyphenation{dis-po-si-ti-vo}
+\hyphenation{ins-tan-cia}
+\hyphenation{si-mu-la-cio-nes}
+\hyphenation{pro-ce-dien-do}
+\hyphenation{to-le-ran-cias}
+\hyphenation{co-rrien-tes}
+\hyphenation{va-lo-res}
+\hyphenation{pu-die-se}
+\hyphenation{des-co-no-cie-sen}
+\hyphenation{des-pués}
+\hyphenation{ins-tru-men-tal}
+\hyphenation{a-mi}
+\hyphenation{me-gus-tan}
+\hyphenation{ma-yo-res}
+
+
+
+
+%cambia las palabras que estan en ingles a castellano
+\AtBeginDocument{\renewcommand\contentsname{Índice}}
+\AtBeginDocument{\renewcommand\figurename{Figura}}
+\AtBeginDocument{\renewcommand\tablename{Tabla}}
+\AtBeginDocument{\renewcommand\chaptername{}}
+
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\setcounter{secnumdepth}{0} %Cancels numeration for sections
+%\makeatletter
