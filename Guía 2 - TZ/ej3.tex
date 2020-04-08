@@ -1,0 +1,155 @@
+\chapter*{Ejercicio 3}
+\addcontentsline{toc}{chapter}{Ejercicio 3}
+
+\section{Parte B}
+Se da la siguiente funci\'on trasferencia:
+
+\begin{equation}
+    H(z) = \frac{z^6}{6z^6 + 5z^5 - 4z^4 + 3Z^3 + 2z^2 + z + 1}
+\end{equation}
+
+Y se pide mostrar la estabilidad del filtro correspondiente. Se sabe que para que sea estable el filtro, es necesario que todos sus polos est\'en dentro del circulo unitario en el plano $z$. Para poder determinar si lo anterior es cierto para la funci\'on dada, el paper recomendado explica la siguiente heur\'istica:
+
+Primero se observa el polinomio del denominador:
+
+\begin{equation}
+    f(z) = 6z^6 + 5z^5 - 4z^4 + 3Z^3 + 2z^2 + z + 1 = a_6z^6 + a_5z^5 + ... + a_1z + a_0
+\end{equation}
+
+se chequea que la magnitud de cada coeficiente que acompaña a $z^{n -1}, z^{n - 2}, ..., z$ sea menor a $n$. 
+
+Luego, debe chequearse la siguiente condici\'on:
+
+\begin{equation}\label{eq:condicion2}
+    |\frac{a_0}{a_n}| < 1
+\end{equation}
+
+Tanto la condici\'on 1 como la condici\'on \ref{eq:condicion2} son necesarias, pero no suficientes para que el sistema sea estable. 
+
+El tercer paso es lograr las condiciones suficientes. En primer lugar se generan las siguientes matrices triangulares a partir de los coeficientes del polinomio:
+
+\begin{equation}\label{eq:matriz1}
+    M_1 = \begin{pmatrix}
+            a_n & a_{n - 1} & a_{n -2} & ... & a_0\\
+            0   & a_n       & a_{n - 1}& ... & a_1\\
+            0   & 0         & a_n      & ... & a_2\\
+            0   & 0         & 0        & ... & a_3\\
+            .   & .         & .        & ... & .  \\
+            .   & .         & .        & ... & .  \\
+            .   & .         & .        & ... & a_n  \\
+            
+            \end{pmatrix}
+\end{equation}
+
+\begin{equation}\label{eq:matriz2}
+    M_2 = \begin{pmatrix}
+            a_n & a_{n - 1} & a_{n -2} & ... & a_0\\
+            a_{n - 1}       & a_{n - 2}& a_{n - 3}& ... & 0\\
+            a_{n - 2}       & a_{n - 3}&  0       & ... & 0\\
+            .               & .        & .        & ... & 0\\
+            .               & .        & .        & ... & 0\\
+            .               & .        & .        & ... & 0\\
+            a_0             & 0        & 0        & ... & 0\\
+            
+            \end{pmatrix}
+\end{equation}
+
+Luego se procede a sumarlas:
+
+\begin{equation}
+    M_{n + 1} = M_1 + M_2
+\end{equation}
+
+Para que el sistema sea estable, la matriz $M_{n + 1}$ deber ser interiormente positiva, y para que eso ocurra los determinantes interiores de dicha matriz deben ser todos positivos, partiendo desde el t\'ermino central de la misma.
+
+\subsection{Resoluci\'on del ejercicio}
+
+Aplicando el m\'etodo explicado anteriormente, se chequean las dos primeras condiciones. Se tiene un $n = 6$, y se cumple por inspecci\'on que los coeficientes son menores, en m\'odulo, a $6$. Con respecto a la segunda condi\'on:
+
+\begin{equation}
+    |\frac{a_0}{a_n}| = \frac{1}{6} < 1
+\end{equation}
+
+Por lo tanto, se procede a construir las dos matrices y sumarlas:
+
+\begin{equation}
+    M_1 = \begin{pmatrix}
+    6 & 5 & -4 & 3 & 2 & 1  & 1 \\
+    0 & 6 & 5 & -4 & 3 & 2  & 1 \\
+    0 & 0 & 6 & 5  & -4& 3  & 2 \\
+    0 & 0 & 0 & 6  & 5 & -4 & 3 \\
+    0 & 0 & 0 & 0  & 6 & 5  & -4\\
+    0 & 0 & 0 & 0  & 0 & 6  & 5 \\
+    0 & 0 & 0 & 0  & 0 & 0 & 6  \\
+            
+    \end{pmatrix}
+\end{equation}
+
+
+\begin{equation}
+    M_2 = \begin{pmatrix}
+    6 & 5 & -4 & 3 & 2 & 1  & 1 \\
+    5 & -4 & 3 & 2 & 1 & 1  & 0 \\
+    -4 & 3 & 2 & 1  & 1& 0  & 0 \\
+    3 & 2 & 1 & 1  & 0 & 0 & 0 \\
+    2 & 1 & 1 & 0  & 0 & 0  & 0\\
+    1 & 1 & 0 & 0  & 0 & 0  & 0 \\
+    1 & 0 & 0 & 0  & 0 & 0 & 0  \\
+            
+    \end{pmatrix}
+\end{equation}
+
+
+\begin{equation}
+    M_n = \begin{pmatrix}
+    
+    12 & 10 & -8 & 6 & 4 & 2  & 2 \\
+    5 & 2 & 8 & -2 & 4 & 3  & 1 \\
+    -4 & 3 & 8 & 6  & -3& 3  & 2 \\
+    3 & 2 & 1 & 7  & 5 & -4 & 3 \\
+    2 & 1 & 1 & 0  & 6 & 5  & -4\\
+    1 & 1 & 0 & 0  & 0 & 6  & 5 \\
+    1 & 0 & 0 & 0  & 0 & 0 & 0  \\
+            
+    \end{pmatrix}
+\end{equation}
+
+Por \'ultimo se calculan los 4 determinantes posibles:
+
+\begin{equation}
+    \nabla_1 = |7| = 7 > 0
+\end{equation}
+
+\begin{equation}
+    \nabla_2  = \begin{vmatrix}
+                8 & 6 & -3\\
+                1 & 7 & 5\\
+                1 & 0 & 6\\
+                
+                \end{vmatrix} = 351 > 0
+\end{equation}
+
+\begin{equation}
+    \nabla_3 = \begin{vmatrix}
+                2 & 8 & -2 & 4 & 3\\
+                3 & 8 & 6 & -3 & 3\\
+                2 & 1 & 7 & 5 & -4 \\
+                1 & 1 & 0 & 6 & 5\\
+                1 & 0 & 0 & 0 & 6\\
+                
+                \end{vmatrix} = 3671 > 0
+\end{equation}
+
+\begin{equation}
+    \nabla_4 = \begin{vmatrix}
+                12 & 10 & -8 & 6 & 4 & 2  & 2 \\
+                5 & 2 & 8 & -2 & 4 & 3  & 1 \\
+                -4 & 3 & 8 & 6  & -3& 3  & 2 \\
+                3 & 2 & 1 & 7  & 5 & -4 & 3 \\
+                2 & 1 & 1 & 0  & 6 & 5  & -4\\
+                1 & 1 & 0 & 0  & 0 & 6  & 5 \\
+                1 & 0 & 0 & 0  & 0 & 0 & 0  \\
+                \end{vmatrix} = 439076 > 0
+\end{equation}
+
+Debido a que se cumplen las dos primeras condiciones necesarias y adem\'as se cumple la condici\'on suficiente el filtro recursivo es estable debido a que todos su polos quedan dentro de circulo unitario. 

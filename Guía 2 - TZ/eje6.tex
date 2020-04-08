@@ -1,0 +1,23 @@
+\chapter*{Ejercicio 6}
+\addcontentsline{toc}{chapter}{Ejercicio 6}
+
+\section{Parte A}
+
+Sabemos que $H\left( e^{jw} \right)=H\left( Z \right)|_{z=e^{jw}}$, es solo un cambio de variable. También sabemos que $\left| H\left( e^{jw} \right) \right|^2= H\left( e^{-jw} \right) H\left( e^{jw} \right)$, por lo tanto podemos realizar las siguientes igualdades:\\
+$\left| H\left( e^{jw} \right) \right|^2=H\left( e^{-jw} \right) H\left( e^{jw} \right)=H\left( Z \right) H\left( Z^{-1} \right)|_{z=e^{jw}}$
+Quedando demostrado que $\left| H\left( e^{jw} \right) \right|^2=H\left( Z \right) H\left( Z^{-1} \right)|_{z=e^{jw}}$
+
+\section{Parte B}
+Teniendo que el filtro es:
+$$H\left( Z \right)=\frac{1-aZ+bZ^2}{b-aZ+Z^2}$$
+Para ver su comportamiento en todas las frecuencias realizamos:
+$$H\left( Z \right)H\left( Z^{-1} \right)=\frac{1-aZ+bZ^2}{b-aZ+Z^2}* \frac{1-aZ^{-1}+bZ^{-2}}{b-aZ^{-1}+Z^{-2}}=\frac{1-aZ+bZ^2}{b-aZ+Z^2}* \frac{Z^{2}-aZ+b}{bZ^{2}-aZ+1}=1$$
+Y como establecimos anteriormente, $\left| H\left( e^{jw} \right) \right|^2=H\left( Z \right) H\left( Z^{-1} \right)|_{z=e^{jw}}$, podemos observar que es un filtro pasa todo.
+
+\section{Parte C}
+Dado que los polos de un filtro de 2° orden son dados por el polinomio $b-aZ+Z^2$ entonces estos se van a encontrar definidos como $\frac{a \pm \sqrt{a^2+ 4b}}{2}$. De esta manera podemos observar que estos van a ser pares conjugados. Sabemos que podemos definir los polos de un orden m por un polinomio genérico, esté puede definirse de la siguiente manera: 
+$$\left( b_0-a_0Z+Z^2 \right)*\left( b_1-a_1Z+Z^2 \right)*\left( b_2-a_2Z+Z^2 \right)\dots$$\\
+En otras palabras, es una multiplicación de polinomios más chicos.\\
+De igual manera, los ceros también pueden definirse como una multiplicación de polinomios más chicos. Entonces, tanto los polos como los ceros van a ocurrir en pares conjugados.\\
+Pero previamente demostramos  que la respuesta en frecuencia de un filtro es $H\left( Z \right) H\left( Z^{-1} \right)|_{z=e^{jw}}$, luego vamos a tener la $H\left( Z^{-1} \right)$ donde sus polos van a ser $bZ^2-aZ+1$ y con los ceros va a suceder lo mismo. Por lo tanto, los ceros y los polos van a ocurrir en pares recíprocos.\\
+Finalmente,podemos concluir que tanto los polos como los ceros van a suceder en pares conjugados y recíprocos.
